@@ -1,97 +1,117 @@
-- title: General Information
+- title: Summary of Skills
   type: map
   contents:
-    - name: Full Name
-      value: Albert Einstein
-    - name: Date of Birth
-      value: 14th March 1879
+    - name: Key skills
+      value: machine learning, deep learning, statistics, data analysis
+    - name: Programming
+      value: Python, R, SQL, SAS, Java, VB
+    - name: Toolkit
+      value: Data Analysis (Scikit-learn, NumPy, Pandas), Deep Learning (PyTorch, Tensorflow), Version Control (Git, Docker), Big Data Platforms (PySpark, Microsoft ML Studio, Google Cloud Platform, AWS), Web Scraping (Selenium, requests), Data Viz (PySimpleGUI, D3), Data Management (SQLite, NoSQL)
+    - name: Certificates
+      value: AWS Certified Cloud Practitioner, SAS Advanced Programmer, Six Sigma Green Belt
     - name: Languages
-      value: English, German
-
+      value: English, Mandarin (native), Spanish (fluent), Catalan (fluent)
+    
 - title: Education
   type: time_table
   contents:
-    - title: PhD
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1905
-      description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Federal teaching diploma
-      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      year: 1900
-      description:
-        - Description 1.
-        - Description 2.
+    - title: PhD in Machine Learning
+      institution: Georgia Institute of Technology, Atlanta, GA
+      year: 2025
+      description: "Minor in Optimization"
+
+    - title: MS in Computer Sciencce
+      institution: Georgia Institute of Technology, Atlanta, GA
+      year: 2023
+      description: "GPA: 3.92/4.00"
+
+    - title: BS in Statistics and in Industrial Engineering
+      institution: North Carolina State University, Raleigh, NC
+      year: 2020
+      description: "GPA: 4.00/4.00"
+
+- title: Awards (Selected)
+  type: time_table
+  contents:
+    - year: 2023
+      items: 
+        - George F. Fellowship, Georgia Tech
+    - year: 2022
+      items: 
+        - Best Student Paper, DAIS Division at the IISE Annual Conference
+    - year: 2021
+      items: 
+        - Best Poster Runners up, Quality and Productivity Research Conference
+        #- NSF Travel Scholarship, Quality and Productivity Research Conference
+    - year: 2020
+      items:
+        - Stewart Fellowship, Georgia Tech
+        - Williams S. Green Fellowship, Georgia Tech
+    - year: 2019
+      items:
+        - Caldwell Fellowship, NC State University 
+        - Edward P. Fitts Sholar, NC State University
+        #- Faculty Senior Award in the ISE Department, NC State University
+    - year: 2013
+      items:
+        - CiMs-Cellex Scholarship, Cellex Foundation
+        # (awarded to 20 students per state based on science and math competence offering full scholarship to study International Baccalaureate) 
+
 
 - title: Experience
   type: time_table
   contents:
-    - title: Professor of Theoretical Physics
-      institution: Institute for Advanced Study, Princeton University
-      year: 1933 - 1955
+    - title: Research Assistant
+      institution: Georgia Tech, Atlanta, GA
+      year: 2021 - now
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Visiting Professor
-      institution: California Institute of Technology, Pasadena, California, US
-      year: 1933
+        - Personalized models of brain tumor density using limited supervision
+        - Prognosis of post-traumatic headache recovery via multi-modal data (clinical, speech, and imaging)
+        - Early detection of Alzheimer's Disease via incomplete multi-modal imaging
+        - Fine-grained classification of dental lesion type from 3D CBCT images
+    - title: Research Assistant
+      institution: NC State University, Raleigh, NC
+      year: 2019 - 2020
       description:
-        - Description 1.
-        - Description 2.
-
-    - title: Director
-      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-      year: 1917-1933
-
-    - title: Professor of Theoretical Physics
-      institution: Karl-Ferdinand University, Prague, Czechoslovakia
-      year: 1911 - 1917
+        - "Prediction of unplanned hospitalization from Medicare medical claims" 
+        - "Data management and real-time monitoring in Additive Manufacturing"
+        #- "Statistical evaluation of the effectiveness of a pilot rehabilitation program "
+    - title: System Operations and Data Analysis Intern
+      institution: FORT Capital Resources, Raleigh, NC
+      year: 2019
       description:
+        - "Supported the deployment of a CRM platform from data migration, mapping out ERDs and workflow, to communicating the automation needs to the developer team"
+    - title: Industrial Engineering Co-op
+      institution: Hafele America Co., Archdale, NC
+      year: 2018 - 2019
+      description:
+        - "Co-built a data warehouse of 20+ databases holding 6 years of inventory and shipments data during the company’s transition from Oracle to SAP "
+        - "Created macros to automate 15h+/week of data cleaning "
+        - "Developed multiple interactive dashboards and KPI reports "
 
-    - title: Associate Professor of Theoretical Physics
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1909 - 1911
-
-- title: Open Source Projects
+- title: Datathons
   type: time_table
   contents:
-    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-      year: 2015-now
-      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
-
-- title: Honors and Awards
-  type: time_table
-  contents:
-    - year: 1921
-      items: 
-        - Nobel Prize in Physics 
-        - Matteucci Medal
-    - year: 2029
-      items: 
-        - Max Planck Medal
-
-- title: Academic Interests
-  type: nested_list
-  contents:
-    - title: Topic 1.
-      items: 
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
+    - year: 2023
       items:
-        - Description 1.
-        - Description 2.
+        - Citadel Data-Open National Championship 
+    - year: 2020
+      items:
+        - CMS AI Outcome National Challenge (top 10%)
+    - year: 2019 
+      items: 
+        - DiamondHacks @ NCSU, 1st Place
+        - Deloitte Startup Innovation Competition @ NCSU, 1st Place
 
-- title: Other Interests
-  type: list
+- title: Community Service
+  type: map
   contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+    - name: Reviewer
+      value: IEEE Transactions on Automation Science and Engineering (IEEE-TASE), INFORMS Journal on Computing, Presidents Undergraduate Research Awards (PURA @ GT)
+    - name: Board Member
+      value: Treasurer of INFORMS @ GT, Advisory Committee of Caldwell Fellows @ NCSU
+    - name: Volunteer
+      value: Consult Your Community (2019-2020), GIS Analyst @ Habitat for Humanity (2018), Engineers Without Borders (2017), New Mind Education (2016-2017)
+    - name: Student Clubs 
+      value: Project Manager @ Society of Asian Scientists and Engineers at NCSU (2019-2020), Treasurer @ IT Club at NCSU (2018-2020)
+    

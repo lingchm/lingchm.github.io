@@ -1,17 +1,53 @@
 ---
 ---
-
 @string{aps = {American Physical Society,}}
 
-@article{mao:inpress-a,
-    title={IEEE Transactions on Automation Science and Engineering},
-    author={Mao, Lingchao and Wang, Lujia and Hu, Leland and Eschbacher, Jennifer M and Leon, Gustavo D. and Singleton, Kyle W. and Curtin, Lee A. and Urcuyo, Javier and Sereduk, Chris and Tran, Nhan L. and Hawkins-Daarud, Andrea and Swanson, Kristin R. and Li, Jing} 
-    journal = "Journal of Nothingness",
-    year    = "\noop{3001}in press",
-    selected={true}
-    }
+@article{mao2023wstl,
+  abbr={IEEE TASE},
+  bibtex_show={false},
+  title={Weaky Supervised Transfer Learning with Application in Precision Medicine},
+  author={Mao, Lingchao and Wang, Lujia and Hu, Leland and Eschbacher, Jennifer M and Leon, Gustavo D. and Singleton, Kyle W. and Curtin, Lee A. and Urcuyo, Javier and Sereduk, Chris and Tran, Nhan L. and Hawkins-Daarud, Andrea and Swanson, Kristin R. and Li, Jing}, 
+  journal={IEEE Transactions on Automation Science and Engineering (in press)},
+  year={2023},
+  preview={wstl.png},
+  abstract={Precision medicine aims to provide diagnosis and treatment accounting for individual differences. To develop machine learning models in support of precision medicine, personalized models are expected to have better performance than one-model-fits-all approaches. A significant challenge, however, is the limited number of labeled samples that can be collected from each individual due to practical constraints. Transfer Learning (TL) addresses this challenge by leveraging the information of other patients with the same disease (i.e., the source domain) when building a personalized model for each patient (i.e., the target domain). We propose Weakly-Supervised Transfer Learning (WS-TL) to tackle two challenges that existing TL algorithms do not address well: (i) the target domain has only a few or even no labeled samples; (ii) how to integrate domain knowledge into themTL design. We design a novel mathematical framework of WS-TL to learn a model for the target domain based on paired samples whose order relationships are inferred from domain knowledge, while at the same time integrating labeled samples in the source domain for transfer learning. Also, we propose an efficient active sampling strategy to select informative paired samples. Theoretical properties were investigated. Finally, we present a real-world application in precision medicine of brain cancer, where WS-TL is used to build personalized patient models to predict Tumor Cell Density (TCD) distribution across the brain based on MRI images. WS-TL has the highest accuracy compared to a variety of existing TL algorithms. The predicted TCD map for each patient can help facilitate individually optimized treatment.}
+}
+
+
+@article{mao2023questionnaire,
+  bibtex_show={false},
+  abbr={Cephalalgia},
+  title={Questionnaire and structural imaging data accurately predict headache improvement in patients with acute post-traumatic headache attributed to mild traumatic brain injury},
+  author={Mao, Lingchao and Li, Jing and Schwedt, Todd J and Berisha, Visar and Nikjou, Devin and Wu, Teresa and Dumkrieger, Gina M and Ross, Katherine B and Chong, Catherine D},
+  journal={Cephalalgia},
+  volume={43},
+  number={5},
+  year={2023},
+  preview={cephalalgia_2023.png},
+  publisher={SAGE Publications Sage UK: London, England},
+  doi={10.1177/03331024231172736},
+  pdf={headache_2023.pdf},
+  url={https://journals.sagepub.com/doi/full/10.1177/03331024231172736},
+  abstract={Our prior work demonstrated that questionnaires assessing psychosocial symptoms have utility for predicting improvement in patients with acute post-traumatic headache following mild traumatic brain injury. In this cohort study, we aimed to determine whether prediction accuracy can be refined by adding structural magnetic resonance imaging (MRI) brain measures to the model. Adults with acute post-traumatic headache (enrolled 0–59 days post-mild traumatic brain injury) underwent T1-weighted brain MRI and completed three questionnaires (Sports Concussion Assessment Tool, Pain Catastrophizing Scale, and the Trait Anxiety Inventory Scale). Individuals with post-traumatic headache completed an electronic headache diary allowing for determination of headache improvement at three- and at six-month follow-up. Questionnaire and MRI measures were used to train prediction models of headache improvement and headache trajectory. Forty-three patients with post-traumatic headache (mean age = 43.0, SD = 12.4; 27 females/16 males) and 61 healthy controls were enrolled (mean age = 39.1, SD = 12.8; 39 females/22 males). The best model achieved cross-validation Area Under the Curve of 0.801 and 0.805 for predicting headache improvement at three and at six months. The top contributing MRI features for the prediction included curvature and thickness of superior, middle, and inferior temporal, fusiform, inferior parietal, and lateral occipital regions. Patients with post-traumatic headache who did not improve by three months had less thickness and higher curvature measures and notably greater baseline differences in brain structure vs. healthy controls (thickness: p < 0.001, curvature: p = 0.012) than those who had headache improvement. A model including clinical questionnaire data and measures of brain structure accurately predicted headache improvement in patients with post-traumatic headache and achieved improvement compared to a model developed using questionnaire data alone.}
+}
+
+
+@inproceedings{ku2023high,
+  abbr={AAIC},
+  bibtex_show={false},
+  title={A high-dimensional incomplete-modality transfer learning method for early prediction of Alzheimer's disease},
+  author={Ku, Dohyun and Zheng, Zhiyang and Mao, Lingchao and Chen, Rui Qi and Su, Yi and Chen, Kewei and Weidman, David and Wu, Teresa and Lure, Fleming and Lo, ShihChung and others},
+  booktitle={Alzheimer's Association International Conference},
+  year={2023},
+  url={https://alz.confex.com/alz/2023/meetingapp.cgi/Paper/78606},
+  organization={ALZ},
+  abstract={Background: Prediction of Alzheimer's disease (AD) risk for individuals with mild cognitive impairment (MCI) provides an opportunity for early intervention. Neuroimaging of different types/modalities has shown promise, but not every patient has all the modalities due to the cost and accessibility constraints. To integrate incomplete multi-modality datasets, we previously developed a machine learning (ML) model called incomplete-modality transfer learning (IMTL). We extended the capacity of IMTL to handle high-dimensional feature sets, namely, HD-IMTL, to further improve accuracy and robustness. Method: Our dataset included 1319 T1-MRI scans from MCI patients in ADNI; among them, 1002 had FDG-PET and 612 had amyloid-PET. 156 regional volumetric and thickness features were computed from MRI and 83 and 83 regional SUVR features from FDG-PET and amyloid-PET, respectively. The dataset is randomly split into training and test sets. The goal of HD-IMTL was to jointly train 4 ML models to predict MCI conversion to AD in 36 months, with each model based on a certain combination of available modalities, namely, MRI, MRI+FDG, MRI+amyloid, and MRI+FDG+amyloid. These correspond to patient sub-cohorts that differ in their access to imaging modalities. To handle high-dimensional features, we employed feature screening to remove uninformative features, performed modality-wise partial least squares (PLS) to condense remaining features into PLS components, and used correlation tests to select components. To jointly train the 4 ML prediction models, IMTL was used, which is a generative model that uses expectation-maximization (EM) in joint parameter estimation to facilitate transfer learning. To account for sample imbalance in training, the Synthetic Minority Over-sampling Technique (SMOTE) was used. The trained models were applied to the test set. 20 training/test splits were repeated and AUCs on the test set were averaged. For comparison, three existing ML models for incomplete-modality fusion were applied to the same dataset. Result: The AUCs by HD-IMTL were 0.802, 0.840, 0.868, and 0.880 for sub-cohorts with MRI, MRI+FDG, MRI+amyloid, and MRI+FDG+amyloid, respectively. The AUCs by existing methods were lower, with ranges of 0.749-0.793, 0.769-0.826, 0.816-0.863, and 0.832-0.868. Conclusion: HD-IMTL demonstrated high accuracy in predicting MCI conversion to AD for patients with varying access/availability of imaging modalities.}
+}
+
 
 @article{mao2023developing,
+  bibtex_show={false},
+  abbr={Headache},
   title={Developing multivariable models for predicting headache improvement in patients with acute post-traumatic headache attributed to mild traumatic brain injury: A preliminary study},
   author={Mao, Lingchao and Dumkrieger, Gina and Ku, Dohyun and Ross, Katherine and Berisha, Visar and Schwedt, Todd J and Li, Jing and Chong, Catherine D},
   journal={Headache: The Journal of Head and Face Pain},
@@ -19,46 +55,41 @@
   number={1},
   pages={136--145},
   year={2023},
+  preview={headache.png},
   publisher={Wiley Online Library},
-  selected={true}
-}
-
-@article{mao2023questionnaire,
-  title={Questionnaire and structural imaging data accurately predict headache improvement in patients with acute post-traumatic headache attributed to mild traumatic brain injury},
-  author={Mao, Lingchao and Li, Jing and Schwedt, Todd J and Berisha, Visar and Nikjou, Devin and Wu, Teresa and Dumkrieger, Gina M and Ross, Katherine B and Chong, Catherine D},
-  journal={Cephalalgia},
-  volume={43},
-  number={5},
-  pages={03331024231172736},
-  year={2023},
-  publisher={SAGE Publications Sage UK: London, England}
+  pdf={cephalalgia_2023.pdf},
+  doi={10.1111/head.14450},
+  url={https://pubmed.ncbi.nlm.nih.gov/36651586/},
+  abstract={Post‐traumatic headache (PTH) is a common symptom after mild traumatic brain injury (mTBI). Although there have been several studies that have used clinical features of PTH to attempt to predict headache recovery, currently no accurate methods exist for predicting individuals' improvement from acute PTH. This study investigated the utility of clinical questionnaires for predicting (i) headache improvement at 3 and 6 months, and (ii) headache trajectories over the first 3 months. We conducted a clinic-based observational longitudinal study of patients with acute PTH who completed a battery of clinical questionnaires within 0–59 days post-mTBI. The battery included headache history, symptom evaluation, cognitive tests, psychological tests, and scales assessing photosensitivity, hyperacusis, insomnia, cutaneous allodynia, and substance use. Each participant completed a web-based headache diary, which was used to determine headache improvement. Thirty-seven participants with acute PTH (mean age = 42.7, standard deviation [SD] = 12.0; 25 females/12 males) completed questionnaires at an average of 21.7 (SD = 13.1) days post-mTBI. The classification of headache improvement or non-improvement at 3 and 6 months achieved cross-validation area under the curve (AUC) of 0.72 and 0.84. Sub-models trained using only the top five features still achieved 0.72 and 0.77 AUC. The top five contributing features were from three questionnaires: Pain Catastrophizing Scale total score and helplessness sub-domain score; Sports Concussion Assessment Tool Symptom Evaluation total score and number of symptoms; and the State-Trait Anxiety Inventory score. The functional regression model achieved for modeling headache trajectory over the first 3 months. Questionnaires completed following mTBI have good utility for predicting headache improvement at 3 and 6 months in the future as well as the evolving headache trajectory. Reducing the battery to only three questionnaires, which assess post-concussive symptom load and biopsychosocialecologic factors, was helpful to determine a reasonable prediction accuracy for headache improvement.}
 }
 
 @article{mao20234d,
+  bibtex_show={false},
   title={A 4D Theoretical Framework for Measuring Topic-Specific Influence on Twitter: Development and Usability Study on Dietary Sodium Tweets},
   author={Mao, Lingchao and Chu, Emily and Gu, Jinghong and Hu, Tao and Weiner, Bryan J and Su, Yanfang},
   journal={Journal of Medical Internet Research},
   volume={25},
   pages={e45897},
   year={2023},
+  url={https://www.jmir.org/2023/1/e45897/},
+  doi={10.2196/45897},
+  preview={twitter_sodium.png},
+  abstract={Background: Social media has emerged as a prominent approach for health education and promotion. However, it is challenging to understand how to best promote health-related information on social media platforms such as Twitter. Despite commercial tools and prior studies attempting to analyze influence, there is a gap to fill in developing a publicly accessible and consolidated framework to measure influence and analyze dissemination strategies. Objective: We aimed to develop a theoretical framework to measure topic-specific user influence on Twitter and to examine its usability by analyzing dietary sodium tweets to support public health agencies in improving their dissemination strategies. Methods: We designed a consolidated framework for measuring influence that can capture topic-specific tweeting behaviors. The core of the framework is a summary indicator of influence decomposable into 4 dimensions: activity, priority, originality, and popularity. These measures can be easily visualized and efficiently computed for any Twitter account without the need for private access. We demonstrated the proposed methods by using a case study on dietary sodium tweets with sampled stakeholders and then compared the framework with a traditional measure of influence. Results: More than half a million dietary sodium tweets from 2006 to 2022 were retrieved for 16 US domestic and international stakeholders in 4 categories, that is, public agencies, academic institutions, professional associations, and experts. We discovered that World Health Organization, American Heart Association, Food and Agriculture Organization of the United Nations (UN-FAO), and World Action on Salt (WASH) were the top 4 sodium influencers in the sample. Each had different strengths and weaknesses in their dissemination strategies, and 2 stakeholders with similar overall influence, that is, UN-FAO and WASH, could have significantly different tweeting patterns. In addition, we identified exemplars in each dimension of influence. Regarding tweeting activity, a dedicated expert published more sodium tweets than any organization in the sample in the past 16 years. In terms of priority, WASH had more than half of its tweets dedicated to sodium. UN-FAO had both the highest proportion of original sodium tweets and posted the most popular sodium tweets among all sampled stakeholders. Regardless of excellence in 1 dimension, the 4 most influential stakeholders excelled in at least 2 out of 4 dimensions of influence. Conclusions: Our findings demonstrate that our method not only aligned with a traditional measure of influence but also advanced influence analysis by analyzing the 4 dimensions that contribute to topic-specific influence. This consolidated framework provides quantifiable measures for public health entities to understand their bottleneck of influence and refine their social media campaign strategies. Our framework can be applied to improve the dissemination of other health topics as well as assist policy makers and public campaign experts to maximize population impact.},
   publisher={JMIR Publications Toronto, Canada}
 }
 
-
 @inproceedings{mao2022personalized,
+  bibtex_show={false},
   title={Personalized Predictions for Unplanned Urinary Tract Infection Hospitalizations with Hierarchical Clustering},
+  abbr={INFORMS ICCS},
   author={Mao, Lingchao and Vahdat, Kimia and Shashaani, Sara and Swann, Julie L},
   booktitle={AI and Analytics for Public Health: Proceedings of the 2020 INFORMS International Conference on Service Science},
   pages={453--465},
   year={2022},
-  organization={Springer}
+  organization={Springer},
+  preview={uti.png},
+  url={https://link.springer.com/chapter/10.1007/978-3-030-75166-1_34},
+  abstract={Urinary Tract Infection (UTI) is the one of the most frequent and preventable healthcare-associated infections in the US and an important cause of morbidity and excess healthcare costs. This study aims to predict the 30-day risk of a beneficiary for unplanned hospitalization for UTI. Using 2008–12 Medicare fee-for-service claims and several public sources, we extracted 784 features, including patient demographics, clinical conditions, healthcare utilization, provider quality metrics, and community safety indicators. To address the challenge of high heterogeneity and imbalance in data, we propose a hierarchical clustering approach that leverages existing knowledge and data-driven algorithms to partition the population into groups of similar risk, followed by building a LASSO-Logistic Regression (LLR) model for each group. Our prediction models are trained on 237,675 2011 Medicare beneficiaries and tested on 230,042 2012 Medicare beneficiaries. We compare the clustering-based approach to a baseline LLR model using five performance metrics, including the area under the curve (AUC), the True Positive Rate (TPR), and the False Positive Rate (FPR). Results show that the hierarchical clustering approach achieves more accurate and precise predictions (AUC 0.72) than the benchmark model and offers more granular feature importance insights for each patient group.}
 }
 
-@inproceedings{ku2023high,
-  title={A high-dimensional incomplete-modality transfer learning method for early prediction of Alzheimer’s disease},
-  author={Ku, Dohyun and Zheng, Zhiyang and Mao, Lingchao and Chen, Rui Qi and Su, Yi and Chen, Kewei and Weidman, David and Wu, Teresa and Lure, Fleming and Lo, ShihChung and others},
-  booktitle={Alzheimer's Association International Conference},
-  year={2023},
-  organization={ALZ},
-  selected={true}
-}
+

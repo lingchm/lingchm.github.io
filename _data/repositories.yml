@@ -1,13 +1,7 @@
 github_users:
-  - lingchm
+  - torvalds
+  - alshedivat
 
 github_repos:
-  - lingchm/us_sodium_policies 
-  - lingchm/Machine-Learning-Base
-  - lingchm/epilepsy_eeg_classification 
-  - lingchm/MRI_MachineReconstructImages 
-  - lingchm/sSLIDE 
-  - EricMartin827/oct_segmentation
-  - cse6242-SP2023-Final-Project
-
+  - alshedivat/al-folio
 
