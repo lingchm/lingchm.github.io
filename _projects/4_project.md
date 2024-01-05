@@ -1,10 +1,10 @@
 ---
 layout: page
-title: project 4
+title: Automatied Diagnosis of Dental Lesion
 description: another without an image
 img:
 importance: 3
-category: fun
+category: machine learning with limited supervision
 ---
 
 Every project has a beautiful feature showcase page.

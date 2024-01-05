@@ -1,10 +1,10 @@
 ---
 layout: page
-title: project 6
-description: a project with no image
+title: Reconstruction of Accelerated MRI
+description: Self-supervised 
 img:
 importance: 4
-category: fun
+category: machine learning with limited supervision
 ---
 
 Every project has a beautiful feature showcase page.

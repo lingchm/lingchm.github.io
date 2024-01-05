@@ -7,9 +7,9 @@ nav: true
 nav_order: 5
 ---
 
-I just started playing tennis 🎾 and am falling for it!
+I play okay-level 🎾, enjoyable-level 🎹, and am a caring cat mom 🐈. 
 
-I am quite active and have had a dozen of hobbies. Two true loves stayed after years: piano 🎹 and cats 🐈. My tuxedo cat Mochi is always happy to connect on instagram at [@mochimao_thecat](https://www.instagram.com/mochimao_thecat/).
+My tuxedo cat Mochi is happy to connect on instagram at [@mochimao_thecat](https://www.instagram.com/mochimao_thecat/)!
 
 If you are someone who speaks Mandarin and want to learn native accent Spanish 🇪🇸, check out [letslearnspanish](https://letslearnspanish.podbean.com/)! We just launched the podcast and will ocassionally add more episodes. 
 

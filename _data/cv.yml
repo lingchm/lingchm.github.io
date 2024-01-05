@@ -3,10 +3,10 @@
   contents:
     - name: Key skills
       value: machine learning, deep learning, statistics, data analysis
-    - name: Programming
+    - name: Programming Languages
       value: Python, R, SQL, SAS, Java, VB
     - name: Toolkit
-      value: Data Analysis (Scikit-learn, NumPy, Pandas), Deep Learning (PyTorch, Tensorflow), Version Control (Git, Docker), Big Data Platforms (PySpark, Microsoft ML Studio, Google Cloud Platform, AWS), Web Scraping (Selenium, requests), Data Viz (PySimpleGUI, D3), Data Management (SQLite, NoSQL)
+      value: Data Analysis (AB Testing, Time Series, Data Mining), Deep Learning (Classification, Segmentation, Object Detection, Self-supervised Learning), Machine Learning (Supervised, Unsupervised, Bayesian inference), Big Data Platforms (PySpark, Microsoft ML Studio, AWS), Web Scraping (Selenium), Version Control (Git, Docker), Data Viz (PySimpleGUI, D3), Data Management (SQLite, NoSQL)
     - name: Certificates
       value: AWS Certified Cloud Practitioner, SAS Advanced Programmer, Six Sigma Green Belt
     - name: Languages
@@ -28,7 +28,7 @@
     - title: BS in Statistics and in Industrial Engineering
       institution: North Carolina State University, Raleigh, NC
       year: 2020
-      description: "GPA: 4.00/4.00"
+      description: "GPA: 4.00/4.00, Dean's List all semesters"
 
 - title: Awards (Selected)
   type: time_table
@@ -45,6 +45,7 @@
         #- NSF Travel Scholarship, Quality and Productivity Research Conference
     - year: 2020
       items:
+        - Best Student Paper Finalist, INFORMS Conference of Service Science
         - Stewart Fellowship, Georgia Tech
         - Williams S. Green Fellowship, Georgia Tech
     - year: 2019

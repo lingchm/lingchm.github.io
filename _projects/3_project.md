@@ -1,11 +1,11 @@
 ---
 layout: page
-title: project 3
+title: Discovery of Biomarkers for Post-traumetic Headache
 description: a project that redirects to another website
 img: assets/img/7.jpg
 redirect: https://unsplash.com
 importance: 3
-category: work
+category: multi-modal learning
 ---
 
 Every project has a beautiful feature showcase page.

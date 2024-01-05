@@ -1,11 +1,10 @@
 ---
 layout: page
-title: Early Diagnosis of Alzheimer's Disease
-description: a multi-moda 
-img: assets/img/3.jpg
-importance: 2
-category: multi-modal learning 
-giscus_comments: true
+title: MMTrip, Your Personalized Multi-modal Trip Planner  
+description: 
+img:
+importance: 4
+category: fun
 ---
 
 Every project has a beautiful feature showcase page.

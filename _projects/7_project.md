@@ -1,11 +1,10 @@
 ---
 layout: page
-title: Early Diagnosis of Alzheimer's Disease
-description: a multi-moda 
-img: assets/img/3.jpg
-importance: 2
-category: multi-modal learning 
-giscus_comments: true
+title: Segmentation of Retinal Layers from OCT Images   
+description: 
+img:
+importance: 4
+category: machine learning with limited supervision
 ---
 
 Every project has a beautiful feature showcase page.
