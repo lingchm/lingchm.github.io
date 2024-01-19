@@ -23,14 +23,11 @@ Hey, thanks for stopping by! 👋
 
 I am a Machine Learning PhD at Georgia Tech working at the intersection of applied and theoretical machine learning. 
 
-Advised by [Dr. Jing Li](https://sites.gatech.edu/jing-li/), our research outcomes have been applied to support the diagnosis, prognosis, and knowledge discovery of various neurological diseases including brain tumor, post-traumatic headache, and Alzheimer’s Disease. Before that, I worked with [Dr. Sara Shashaani](https://shashaani.wordpress.ncsu.edu/) and [Dr. Julie Swann](https://www.ise.ncsu.edu/people/jlswann/) from NC State University on analyzing millions of medical claims and with [Dr. Yanfang Su](https://globalhealth.washington.edu/faculty/yanfang-su) from UW on analyzing public influence of health organizations on Twitter. 
+Advised by [Dr. Jing Li](https://sites.gatech.edu/jing-li/), I study how to use machine learning to support diagnosis, prognosis, and knowledge discovery of neurological diseases such as brain cancer, post-traumatic headache, and Alzheimer’s Disease. Before that, I worked with [Dr. Sara Shashaani](https://shashaani.wordpress.ncsu.edu/) and [Dr. Julie Swann](https://www.ise.ncsu.edu/people/jlswann/) from NC State University analyzing millions of medical claims and with [Dr. Yanfang Su](https://globalhealth.washington.edu/faculty/yanfang-su) from UW analyzing health-related public engagements on Twitter. 
 
-My research interest fall under three main categories:
- - Machine Learning with limited supervision 
- - Multi-modal learning with incomplete modality data
- - Data mining & knowledge discovery 
+Outside research, I like building ML/AI solutions and contribute to fun projects such as MMTrip and [AskMendel] (https://askmendel.ai/). 
 
-Here is my [CV](/assets/pdf/cv_lingchaomao.pdf). Also see [publications](/publications/) and [projects](/projects/) to learn more about my works.
+Here is my [CV](/assets/pdf/cv_lingchaomao.pdf). Also see [research](/research/) and [projects](/projects/) to learn more about my works.
 
 
 

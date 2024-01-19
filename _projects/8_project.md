@@ -1,10 +1,11 @@
 ---
 layout: page
-title: MMTrip, Your Personalized Multi-modal Trip Planner  
+title: MMTrip, a Multi-Modal Trip Planner  
 description: 
 img:
 importance: 4
 category: fun
+related_publications: 
 ---
 
 Every project has a beautiful feature showcase page.

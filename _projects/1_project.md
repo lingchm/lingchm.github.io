@@ -4,7 +4,7 @@ title: Precision Medicine of Glioblastoma
 description: a weakly-supervised transfer learning for personalized predictive modeling of tumor cell density 
 img: assets/img/12.jpg
 importance: 1
-category: machine learning with limited supervision 
+category: ML with limited supervision
 related_publications: mao2023wstl
 ---
 
