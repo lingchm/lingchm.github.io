@@ -1,12 +1,10 @@
 ---
 layout: page
-title: 
+title: projects
 permalink: /projects/
 description: 
 nav: true
 nav_order: 4
-display_categories: []
-horizontal: false
 ---
 
 ### Research 
@@ -14,18 +12,22 @@ horizontal: false
 My research fall under two main categories:
 
 1. **Machine Learning with limited supervision**
-- A [live review of](https://lingchm.github.io/kinformed-machine-learning-cancer/) Knowledge-informed machine learning for cancer applications 
+- A [live review of knowledge-informed machine learning](https://lingchm.github.io/kinformed-machine-learning-cancer/) for cancer applications 
 - Predicting Tumor Cell Density maps for brain cancer using MRI (*Mayo Clinic*)
 - Reconstruction of accelerated MRI using self-supervised learning 
 - Automated segmentation and classification of dental lesion from 3D CBCT (*Upenn Dental*)
+- Segmentation of retinal layers from OCT Images with uncertainty quantification (*Feola Lab*)
   
 2. **Multi-modal learning**
 - Prediction of recovery from post-traumatic headache using clinical and imaging data 
 - Early prognosis of Alzheimer’s Disease using incomplete multi-modal neuroimaging and genetics data (*Mayo Clinic*)
 
-Other earlier research projects included:  
+In addition to clinical applications, I also analyzed population-level data for public health applications: 
+
+3. **Large-scale data mining and predictive modeling**
 - Prediction of unplanned hospitalizations for Medicare patients (*CMS AI Challenge*)
-- Segmentation of retinal layers from OCT Images 
+- Analyzing the public influence of health organizations on Twitter 
+- An [interactive dahsboard](https://us-sodium-policies.shinyapps.io/Rshiny/) to visualize trends about dietary sodium-related US policies 
 
 
 ### Fun 
@@ -33,7 +35,6 @@ Other earlier research projects included:
 Outside research, I like to create AI/ML solutions to automatically analyze data. Here are some favorites:
 
 - MMTrip, Your Personal Multi-Modal Planner (website under development)
-- An [interactive dahsboard](https://us-sodium-policies.shinyapps.io/Rshiny/) to analyze sodium-related US policies 
 - [AskMendel](https://askmendel.ai/), a LLM chatbot for automatic bioinformatics data analysis and visualization 
 
 
