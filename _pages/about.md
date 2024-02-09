@@ -25,9 +25,9 @@ I am a Machine Learning PhD at Georgia Tech working at the intersection of appli
 
 Advised by [Dr. Jing Li](https://sites.gatech.edu/jing-li/), I study how to use machine learning to support diagnosis, prognosis, and knowledge discovery of neurological diseases such as brain cancer, post-traumatic headache, and Alzheimer’s Disease. Before that, I worked with [Dr. Sara Shashaani](https://shashaani.wordpress.ncsu.edu/) and [Dr. Julie Swann](https://www.ise.ncsu.edu/people/jlswann/) from NC State University analyzing millions of medical claims and with [Dr. Yanfang Su](https://globalhealth.washington.edu/faculty/yanfang-su) from UW analyzing health-related public engagements on Twitter. 
 
-Outside research, I like building ML/AI solutions and contribute to fun projects such as MMTrip and [AskMendel](https://askmendel.ai/). 
+Outside research, I like building ML/AI solutions and contribute to fun projects such as [MMTrip](https://youtu.be/g0p3DScMEJs) and [AskMendel](https://askmendel.ai/). 
 
-Here is my [CV](/assets/pdf/cv_lingchaomao.pdf). Also see [projects](/projects/) for more details about my works.
+Here is my [CV](/assets/pdf/cv_lingchaomao.pdf) and one-page [resume](/assets/pdf/resume_lingchaomao.pdf). Also see [projects](/projects/) for more details about my works.
 
 
 
