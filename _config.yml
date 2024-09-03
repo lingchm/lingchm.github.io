@@ -232,7 +232,7 @@ plugins:
   - jekyll-toc
   - jekyll-twitter-plugin
   - jemoji
-  - jekyll-seo-tag    # output metadata for search engines to better index and display
+  # - jekyll-seo-tag    # output metadata for search engines to better index and display
 
 # Sitemap settings
 defaults:
