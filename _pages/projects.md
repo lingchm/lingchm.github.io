@@ -10,28 +10,27 @@ display_categories: []
 
 ### Research 
 
-My research fall under two main categories:
+My research fall under three main categories:
 
 1. **Machine Learning with limited supervision**
 - A review of knowledge-informed machine learning for cancer applications ([website](https://lingchm.github.io/kinformed-machine-learning-cancer/))
-- Predicting Tumor Cell Density maps for brain cancer using MRI (*Mayo Clinic*) ([paper](https://ieeexplore.ieee.org/abstract/document/10292790))
-- Reconstruction of accelerated MRI using self-supervised learning 
-- Automated segmentation and classification of dental lesion from 3D CBCT (*Upenn Dental*)
+- Weakly Supervised Transfer Learning for precision medicine of brain cancer (*Mayo Clinic*) ([paper](https://ieeexplore.ieee.org/abstract/document/10292790)) (*🏆 Best Student Paper, IISE DAIS 2022*)
+- A weakly supervised approach for liver tumor segmentation ([website](https://lingchmao-medassist-liver-cancer.hf.space/))(*🏆 Winner, IISE DAIS 2024*)
+- Self-supervised learning for the reconstruction of accelerated MRI 
 - Segmentation of retinal layers from OCT Images with uncertainty quantification (*Feola Lab*)
   
-2. **Multi-modal learning**
-- Prediction of recovery from post-traumatic headache using clinical and imaging data (*Mayo Clinic*) ([paper](https://headachejournal.onlinelibrary.wiley.com/doi/abs/10.1111/head.14450)) ([paper](https://journals.sagepub.com/doi/full/10.1177/03331024231172736)) 
-- Early prognosis of Alzheimer’s Disease using incomplete multi-modal neuroimaging and genetics data ([abstract](https://alz-journals.onlinelibrary.wiley.com/doi/abs/10.1002/alz.078606)) 
+2. **Machine Learning with multi-source/multi-modal data**
+- Supervised Multi-modal Fission Learning (paper under review)
+- A cross-modal Mutual Knowledge Distillation framework for Alzheimer's Disease: addressing incomplete modalities (paper under review)
+- Prediction of post-traumatic headache recovery using clinical and imaging data (*Mayo Clinic*) ([paper](https://headachejournal.onlinelibrary.wiley.com/doi/abs/10.1111/head.14450)) ([paper](https://journals.sagepub.com/doi/full/10.1177/03331024231172736)) 
 
-I also analyzed population-level data for public health applications: 
-
-3. **Large-scale data mining and predictive modeling**
-- Prediction of unplanned hospitalizations for Medicare patients ([*CMS AI Challenge*](https://www.cms.gov/priorities/innovation/innovation-models/artificial-intelligence-health-outcomes-challenge))([paper](https://link.springer.com/chapter/10.1007/978-3-030-75166-1_34))
-- Analyzing the public influence of health organizations on Twitter ([paper](https://www.jmir.org/2023/1/e45897/))
-- Analyzing public health policies for sodium reduction in the U.S. ([interactive dashboard](https://us-sodium-policies.shinyapps.io/Rshiny/))
+3. **Data mining and subgroup identification**
+- Identifying subgroups of patients with post-traumatic headache
+- Hierarchical clustering and predictive modeling for of unplanned hospitalizations of Medicare patients ([*🏆 CMS AI Challenge*](https://www.cms.gov/priorities/innovation/innovation-models/artificial-intelligence-health-outcomes-challenge))([paper](https://link.springer.com/chapter/10.1007/978-3-030-75166-1_34))
+- Finding social media influencers for sodium reduction on Twitter in the U.S. ([paper](https://www.jmir.org/2023/1/e45897/)) ([interactive dashboard](https://us-sodium-policies.shinyapps.io/Rshiny/))
 
 
-### Fun 
+### Personal Projects 
 
 Outside research, I like to create AI/ML solutions to automatically analyze data. Here are some favorites:
 
