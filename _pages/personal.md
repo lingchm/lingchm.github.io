@@ -4,7 +4,7 @@ permalink: /personal/
 title: personal
 description: 
 nav: true
-nav_order: 5
+nav_order: 6
 ---
 
 I play okay-level 🎾, enjoyable-level 🎹, and am a caring cat mom 🐈. 
