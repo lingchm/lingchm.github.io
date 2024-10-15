@@ -490,16 +490,92 @@ A *token-based*, *early fusion*, multimodal learning algorithm through *pure aut
     * Discrete VAE (2016): a VAE restricting the latent space to be discrete tokens. However, a limitation is that the key trick to train VAE, reparameterization trick, does not work because it is not differentiable 
     * VQ-VAE (2017): a more stable pipeline levearging the idea of vector quantization. Learns a continuous latent representation for image patches, but force it to be representatble as discrete tokens through projection onto their nearest neighbors in the codebook 
     * VQ-GAN (2021): improves upon VQ-VAE by enabling the learning of a representaiton-rich codebook with additional perceptual losses and GAN losses 
-    * Intuition: Why does discrete tokens work so well?
+    * Stable Diffusion also uses this! 
+    * Intuition: Why does discrete tokens work so well in a lot of domains?
         * Continuous spaces and high-dimensional objects are hard in general
         * Sometimes too much flexibility is not the best. Discrete space restricts model's attention to more finite and important details 
-* 
-
-
-
+* Token-based image self-supervised learning
+    * BEIT:
+        * Motivated by the success of BERT and masked language modelling on language tasks, BEIT attempts a similar analogy for image representation learning
+        * Images are separated patches and encoded in two ywas: 1) through d-VAE into visual tokens, 2) through linear projection head into latent vectors
+        * SSL task: given a image in pixel space where some patches are masked, predict the visual tokens with a vision transformer as backbone 
+    * CM3 & CM3Leon (precursor work of Chameleon):
+        * Extends the token-based modelling approach to multimodal data in a pure *autoregressive* fashion
+        * CM3 considered a causally masked language training objective, where hyperlinks and images are replaced with a placeholder <mask> token in the middle of text generation, and they will be generated at the end of the sentence. In other words, it turns inputs into infilling instances by masking certain segments and moving them to the end, effectively transforming a multi-modal task into a text prediction one. This approach enables the model to handle infilling and autoregressive generation tasks for both images and text. 
+            * For example, it can generate an image from a text prompt like “Image of a chameleon:”, or produce a caption from a masked image prompt like “Image of : [image] “.
+        * CM3Leon scales up CM3 and add a second stage of SFT to align this general purpose model. 
+* Early Fusion vs Late-Fusion 
+    * Late fusion: data of different modalities are encoded separately with different encoders before passing to a model for fusion 
+        * Ex. Flamingo, ViLT, LLaVA, Unified-IO
+    * Early fusion: data of different modalities are encdoed into discrete token with a shared vocabulary, then representation are learned in a shared latent space
+        * Ex. Chameleon, Show-o, Transfusion
+        * Chameleon is purely autoregressive. All attention are causally masked due to always predicting the next tokens 
+        * Other two works model text in a autoregressive way, but generate image tokens simultaneously. Attention are causally masked when generating text but bidirectional when generating images  
 
 **Approach**
+* Tokenization
+    * Text
+        * BPE tokenizer trained from sratch with a vocabulary size of 65,536, which includes the 8192 image codebook tokens
+    * Image
+        * Train a new image tokenizer based on Gafni et al. (2022), which encodes a 512 × 512 image into 1024 discrete tokens from a codebook of size 8192. 
+        * For training this tokenizer, used only licensed images. 
+        * A core weakness of this tokenizer is in reconstructing images with a large amount of text, therefore upper bounding the capability of the models when it comes to heavy OCR-related tasks.
+* Architecture improvements: 
+    * A uniform mixed-modal transformer to process tokens from all modalities 
+    * Decoder-only model derived from Llama 2
+    * RMSNorm instead of LayerNorm for layer normalization. No clear argument for performance, but more computationally efficient
+    * SwiGLU activation function everywhere, compared to GLU activation
+    * Rotary positional encoding: allows for better passing of relative position information 
+
+* Pre-training
+    * Step 1. Train using large-scale, completely unsupervised datasets for 80% of total training steps
+    * Step 2. lower the weight of the unsupervised datasets and mix in other smaller but high-quality datasets 
+    * Alignment
+        * Performed a lightweight alignment stage by supervised fine-tuning using carefully curated datasets
+        * Included a range of different tasks separated between Text, Code, Visual Chat, Image Generation, Interleaved Text/Image Generation, and Safety. Some of these curated datasets are licensed data.
+    * Data Balancing
+        * Observed that balancing modalities within the SFT stage is important for high quality alignment. Specifically during the SFT stage, if there is a severe imbalance between pairings of modalities (or when a specific modality should trigger), the model learns an unconditional prior of generating that modality which can either mute or over exaggerate the generation of a single modality.
+
 ![chameleon](../assets/img/blogs/chameleon.png)
+
+* Resolving Stability Issues
+    * Observed training instability in multimodal settings and attributes this to "competition between modalities". This seem to be problematic for larger models and long training runs, and creates stability issues once norms reach the bf16 floating point limit. Often happens at the end of the training.
+    * Query-Key normalization solves the issue of norm growth in attention
+    * Moving Layernorms outside the attention and MLP helps bounds the norm growth of the feedforward block
+    * Regularized the partition function Z of the softmax function by adding 10e−5 log^2 Z to the loss function
+    * Dropout: For Chameleon-7B it was important to use both dropout and z-loss to achieve stability, while Chameleon-34B only required z-loss
+
+* Inference Challenges 
+    * Data dependencies per-step: image and text each have their own decoding methods, tokens must be inspected at each step (i.e. copied from the GPU to the CPU in a blocking fashion) to guide control flow. 
+        * However, no specific details about how this was done 
+    * Constrained generation masking: for exclusive generation for a particular modality (e.g. image-only generation), tokens that do not fall in a particular modality space must be masked and ignored when de-tokenizing.
+    * Fixed-sized text units: unlike text-only generation, which is inherently variable-length, token-based image generation produces fixed-size blocks of tokens corresponding to an image.
+    * Thier inference implementation supports streaming for both text and images. When generating in a streaming fashion, token-dependent conditional logic is needed at each generation step. Without streaming, however, blocks of image tokens can be generated in a fused fashion without conditional computation. 
+
+**Evaluation**
+* Human evaluation in prompt generation
+    * Generated diverse and natural prompts from human annotators
+    * Evaluated prompts and filterd out unclear prompts and prompts that don't expect mixed-modal responses, about 1,048 prompts: 441 (42.1%) mixed-modal, and 607 (57.9%) text-only.
+* Benchmarks 
+    * Absolute evaluation where judges mark whether responses fulfills/partially fulfills/does not fulfill the task 
+* Competing methods
+    * Augmenting GPT-4V and Gemini's responses with images. Instructed models togenrate image captions by text. 
+
+![chameleon2](../assets/img/blogs/chameleon2.png)
+
+**Discussion**
+* Strengths
+    * Demonstrated the possibility of scaling early-fusion VLM for generating interleaved text and images
+    * Early fusion model have a simple design space without worrying about modality specific encoders and allows seamless integation across modalities
+    * Introduced techniques for stable training of super large models
+    * Performed human evaluation 
+* Weakness
+    * Comparing with non-native mixed-modality models does not benchmark the Chameleon's performance in a convincing way
+    * Comparing with Flamingo, InternVL, etc., experiments contain fewer tasks and datasets 
+    * Some data used in training are licensed 
+
+
+
 
 
 

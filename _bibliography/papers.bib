@@ -2,20 +2,33 @@
 ---
 @string{aps = {American Physical Society,}}
 
+@article{mao2024knowledge,
+  abbr={IEEE TASE},
+  bibtex_show={false},
+  title={Knowledge-Informed Machine Learning for Cancer Diagnosis and Prognosis: A review},
+  author={Mao, Lingchao and Wang, Hairong and Hu, Leland S and Tran, Nhan L and Canoll, Peter D and Swanson, Kristin R and Li, Jing},
+  journal={arXiv preprint arXiv:2401.06406},
+  year={2024},
+  preview={kiml.png},
+  abstract={Cancer remains one of the most challenging diseases to treat in the medical field. Machine learning has enabled in-depth analysis of rich multi-omics profiles and medical imaging for cancer diagnosis and prognosis. Despite these advancements, machine learning models face challenges stemming from limited labeled sample sizes, the intricate interplay of high-dimensionality data types, the inherent heterogeneity observed among patients and within tumors, and concerns about interpretability and consistency with existing biomedical knowledge. One approach to surmount these challenges is to integrate biomedical knowledge into data-driven models, which has proven potential to improve the accuracy, robustness, and interpretability of model results. Here, we review the state-of-the-art machine learning studies that adopted the fusion of biomedical knowledge and data, termed knowledge-informed machine learning, for cancer diagnosis and prognosis. Emphasizing the properties inherent in four primary data types including clinical, imaging, molecular, and treatment data, we highlight modeling considerations relevant to these contexts. We provide an overview of diverse forms of knowledge representation and current strategies of knowledge integration into machine learning pipelines with concrete examples. We conclude the review article by discussing future directions to advance cancer research through knowledge-informed machine learning.}
+}
+
 @article{mao2024liver,
+  bibtex_show={false},
   title={A Holistic Weakly Supervised Approach for Liver Tumor Segmentation},
   author={Wang, Hairong and Mao, Lingchao and Zhang, Zihan and Li, Jing},
-  journal={IISE Transactions on Healthcare Systems Engineering (in preparation)},
+  journal={arXiv preprint arXiv:2410.10005},
   year={2024},
   preview={liver2024.png},
-  abstract={upcoming}
+  abstract={Liver cancer is a leading cause of mortality worldwide, and accurate CT-based tumor segmentation is essential for diagnosis and treatment. Manual delineation is time-intensive, prone to variability, and highlights the need for reliable automation. While deep learning has shown promise for automated liver segmentation, precise liver tumor segmentation remains challenging due to the heterogeneous nature of tumors, imprecise tumor margins, and limited labeled data. We present a novel holistic weakly supervised framework that integrates clinical knowledge to address these challenges with (1) A knowledge-informed label smoothing technique that leverages clinical data to generate smooth labels, which regularizes model training reducing the risk of overfitting and enhancing model performance; (2) A global and local-view segmentation framework, breaking down the task into two simpler sub-tasks, allowing optimized preprocessing and training for each; and (3) Pre- and post-processing pipelines customized to the challenges of each subtask, which enhances tumor visibility and refines tumor boundaries. We evaluated the proposed method on the HCC-TACE-Seg dataset and showed that these three key components complementarily contribute to the improved performance. Lastly, we prototyped a tool for automated liver tumor segmentation and diagnosis summary generation called MedAssistLiver. The app and code are published at https://github.com/lingchm/medassistliver-cancer.}
 }
 
 @article{mao2024mkd,
   abbr={IEEE TASE},
+  bibtex_show={false},
   title={A Cross-Modal Mutual Knowledge Distillation Framework for Alzheimer's Disease: Addressing Incomplete Modalities},
   author={Kwak, Mingu and Mao, Lingchao and Zheng, Zhiyang and Su, Yi  and Fleming, Lure and Li, Jing},
-  journal={IEEE Transactions on Automation Science and Engineering (under review)},
+  journal={IEEE Transactions on Automation Science and Engineering (major revision)},
   year={2024},
   preview={mkd.png},
   abstract={Early detection of Alzheimer's Disease (AD) is crucial for timely interventions and optimizing treatment outcomes. Despite the promise of integrating multimodal neuroimages such as MRI and PET, handling datasets with incomplete modalities remains under-researched. This phenomenon, however, is common in real-world scenarios as not every patient has all modalities due to practical constraints such as cost, access, and safety concerns. We propose a deep learning framework employing cross-modal Mutual Knowledge Distillation (MKD) to model different sub-cohorts of patients based on their available modalities. In MKD, the multimodal model (e.g., MRI and PET) serves as a teacher, while the single-modality model (e.g., MRI only) is the student. Our MKD framework features three components: a Modality-Disentangling Teacher (MDT) model designed through information disentanglement, a student model that learns from classification errors and MDT's knowledge, and the teacher model enhanced via distilling the student's single-modal feature extraction capabilities. Moreover, we show the effectiveness of the proposed method through theoretical analysis and validate its performance with simulation studies. In addition, our method is demonstrated through a case study with Alzheimer's Disease Neuroimaging Initiative (ADNI) datasets, underscoring the potential of artificial intelligence in addressing incomplete multimodal neuroimaging datasets and advancing early AD detection.}
@@ -23,26 +36,18 @@
 
 @article{mao2024mmfl,
   abbr={INFORMS JDS},
+  bibtex_show={false},
   title={Supervised Multi-Modal Fission Learning},
   author={Mao, Lingchao and Wang, Qi and Su, Yi and Lure, Fleming and Li, Jing},
-  journal={INFORMS Journal of Data Science (in preparation)},
+  journal={arXiv preprint arXiv:2409.20559},
   year={2024},
   preview={mmfl.png},
   abstract={Learning from multi-modal datasets can leverage complementary information and lead to improved performance for prediction tasks. To account for feature correlations in high-dimensional datasets, a commonly used strategy is the latent variable approach. Several latent variable methods in the literature have been proposed for multi-modal datasets, however, these methods either focus on extracting the shared component across all modalities or extracting a shared component and individual components specific to each modality. To address this gap, we propose a Multi-Modal Fission Learning (MMFL) model that simultaneously identifies globally joint, partially joint, and individual components underlying the features of multi-modal datasets. Unlike existing latent variable methods, MMFL uses supervision from labels to identify predictive latent components and has a natural extension to incorporate incomplete multi-modal data. In our simulation studies, MMFL outperformed a variety of existing multi-modal algorithms under both complete modality and incomplete modality settings. We applied MMFL to a real-world case study for early prediction of Alzheimer’s Disease using multi-modal neuroimaging (MRI and PET) and genetic data (SNP) from the Alzheimer’s Disease Neuroimaging Initiative (ADNI) dataset. MMFL provided more accurate predictions and better insights for understanding within and across modality correlations compared to existing methods.}
 }
 
-@article{mao2024knowledge,
-  abbr={IEEE TASE},
-  title={Knowledge-Informed Machine Learning for Cancer Diagnosis and Prognosis: A review},
-  author={Mao, Lingchao and Wang, Hairong and Hu, Leland S and Tran, Nhan L and Canoll, Peter D and Swanson, Kristin R and Li, Jing},
-  journal={IEEE Transactions on Automation Science and Engineering (under review)},
-  year={2024},
-  preview={kiml.png},
-  abstract={Cancer remains one of the most challenging diseases to treat in the medical field. Machine learning has enabled in-depth analysis of rich multi-omics profiles and medical imaging for cancer diagnosis and prognosis. Despite these advancements, machine learning models face challenges stemming from limited labeled sample sizes, the intricate interplay of high-dimensionality data types, the inherent heterogeneity observed among patients and within tumors, and concerns about interpretability and consistency with existing biomedical knowledge. One approach to surmount these challenges is to integrate biomedical knowledge into data-driven models, which has proven potential to improve the accuracy, robustness, and interpretability of model results. Here, we review the state-of-the-art machine learning studies that adopted the fusion of biomedical knowledge and data, termed knowledge-informed machine learning, for cancer diagnosis and prognosis. Emphasizing the properties inherent in four primary data types including clinical, imaging, molecular, and treatment data, we highlight modeling considerations relevant to these contexts. We provide an overview of diverse forms of knowledge representation and current strategies of knowledge integration into machine learning pipelines with concrete examples. We conclude the review article by discussing future directions to advance cancer research through knowledge-informed machine learning.}
-}
-
 @article{mao2024headache,
   abbr={Headache},
+  bibtex_show={false},
   title={Identifying and Predicting Headache Trajectories Amongst Those with Acute Post-Traumatic Headache},
   author={Mao, Lingchao and Li, Jing and Schwedt, Todd and Wu, Teresa and Ross, Katherine and Dumkrieger, Gina and Smith, Dani and Chong, Catherine D},
   journal={Headache: The Journal of Head and Face Pain (under review)},
@@ -53,6 +58,7 @@
 
 @article{mao2024sodium,
   abbr={JMIR},
+  bibtex_show={false},
   title={Tracking Influencers in Policy Field on Social Media: A Global Longitudinal Study of Dietary Sodium Reduction Posts, 2006-2022},
   author={Montoya, Alana* and Lingchao, Mao* and Drewnowski, Adam and Chen, Joshua and Shi, Ella and Liang, Aileen and Weiner, Bryan and Su, Yanfang},
   journal={Journal of Medical Internet Research (under review)},
@@ -62,6 +68,7 @@
 }
 
 @article{lewis2023revealing,
+  bibtex_show={false},
   title={Revealing the biology behind MRI signatures in high grade glioma},
   author={Lewis, Erika M and Mao, Lingchao and Wang, Lujia and Swanson, Kristin R and Barajas, Ramon F and Li, Jing and Tran, Nhan L and Hu, Leland S and Plaisier, Christopher L},
   journal={medRxiv},
@@ -75,7 +82,7 @@
 @article{mao2023wstl,
   abbr={IEEE TASE},
   bibtex_show={false},
-  title={Weaky Supervised Transfer Learning with Application in Precision Medicine},
+  title={Weakly Supervised Transfer Learning with Application in Precision Medicine},
   author={Mao, Lingchao and Wang, Lujia and Hu, Leland and Eschbacher, Jennifer M and Leon, Gustavo D. and Singleton, Kyle W. and Curtin, Lee A. and Urcuyo, Javier and Sereduk, Chris and Tran, Nhan L. and Hawkins-Daarud, Andrea and Swanson, Kristin R. and Li, Jing}, 
   journal={IEEE Transactions on Automation Science and Engineering},
   year={2023},
@@ -110,7 +117,9 @@
   url={https://alz.confex.com/alz/2023/meetingapp.cgi/Paper/78606},
   year={2023},
   preview={AD.png},
-  publisher={Wiley Online Library}
+  publisher={Wiley Online Library},
+  bibtex_show={false},
+  abstract={Prediction of Alzheimer’s disease (AD) risk for individuals with mild cognitive impairment (MCI) provides an opportunity for early intervention. Neuroimaging of different types/modalities has shown promise, but not every patient has all the modalities due to the cost and accessibility constraints. To integrate incomplete multi-modality datasets, we previously developed a machine learning (ML) model called incomplete-modality transfer learning (IMTL). We extended the capacity of IMTL to handle high-dimensional feature sets, namely, HD-IMTL, to further improve accuracy and robustness. Our dataset included 1319 T1-MRI scans from MCI patients in ADNI; among them, 1002 had FDG-PET and 612 had amyloid-PET. 156 regional volumetric and thickness features were computed from MRI and 83 and 83 regional SUVR features from FDG-PET and amyloid-PET, respectively. The dataset is randomly split into training and test sets. The goal of HD-IMTL was to jointly train 4 ML models to predict MCI conversion to AD in 36 months, with each model based on a certain combination of available modalities, namely, MRI, MRI+FDG, MRI+amyloid, and MRI+FDG+amyloid. These correspond to patient sub-cohorts that differ in their access to imaging modalities. To handle high-dimensional features, we employed feature screening to remove uninformative features, performed modality-wise partial least squares (PLS) to condense remaining features into PLS components, and used correlation tests to select components. To jointly train the 4 ML prediction models, IMTL was used, which is a generative model that uses expectation-maximization (EM) in joint parameter estimation to facilitate transfer learning. To account for sample imbalance in training, the Synthetic Minority Over-sampling Technique (SMOTE) was used. The trained models were applied to the test set. 20 training/test splits were repeated and AUCs on the test set were averaged. For comparison, three existing ML models for incomplete-modality fusion were applied to the same dataset. The AUCs by HD-IMTL were 0.802, 0.840, 0.868, and 0.880 for sub-cohorts with MRI, MRI+FDG, MRI+amyloid, and MRI+FDG+amyloid, respectively. The AUCs by existing methods were lower, with ranges of 0.749-0.793, 0.769-0.826, 0.816-0.863, and 0.832-0.868 }
 }
 
 
