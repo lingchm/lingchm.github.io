@@ -574,7 +574,159 @@ A *token-based*, *early fusion*, multimodal learning algorithm through *pure aut
     * Comparing with Flamingo, InternVL, etc., experiments contain fewer tasks and datasets 
     * Some data used in training are licensed 
 
+## GLIGEN
 
+**Related Works**
+* Large scale text-to-image generation models
+    * Autoregressive approaches
+        * DALL-E is one of the breakthrough works that demonstrates zero-shot abilities
+        * Parti demonstrates the feasibility of scaling up autoregressive models
+    * Diffusion approaches
+        * Diffusion models require fewer parameters in general
+* Closed-vocabulary grounded image generation
+    * Layout2lm (2019): object labels and bounding boes are each encoded separately, fused together, and decoded into a single image. Used VAE encoder-decoder and LSTM 'fuser'
+    * lostGAN/ALAMA (2019/2021): GAN converts bounding boxes to masks then converts masks to image
+    * Make-a-Scene (2022): Semantic map converted to [scene] tokens using VAE (VQ-SEG). Transformer network then generates [image] tokens from [text] and [scene] tokens
+* Open-vocabulary Gounded Image Generation 
+    * eDiff-I (2022): Noted that image structure conditioned on text is established early on in denoisinig process, while later steps mostly focus on image refinement and ignore textual conditoning. Leverages this finding to train unique score networks for different segments of the denoising process. Used a training-free cross-attention approach for integrating semantic map grounding 
+    * Reco (2023): concatenates textual embedding with bounding box locations and latent descriptions. Finetunes stable diffusion on augmented conditioning 
+    * Sketch-guided text-to-image diffusion models: a universal approach to guide a pretrianed text-to-image diffusion model. A spatial map from another domain is added during inference time. However, there is no semantic understanding of the grounding input. 
+    * ControlNet: enhance pre-trained text-to-image diffusion models by adding spatial conditioning controls.
+        * adds an identical copy of the encoder block 
+        * simpler integration but less general than GLIGEN 
+        * GLIGEN uses a concatenation-based approach, making it more general and flexible, while ControlNet uses a sum-based approach, focusing a spatial alignment
+
+**Approach**
+* **Prelim: Stable Diffusion** adds VAE to the standard diffusion process and do diffusion on the latent image representation, and CLIP encodes caption on which diffusion process is additionally conditioned 
+* From closed-set to open-set setting:
+    * closed-set is a dictionary look-up problem
+    * if we have a text encoder trained on all text data, we should be able to extend to open-set 
+
+![gligen1](../assets/img/blogs/gligen1.gif)
+
+* How aditional grounding input can be instructed? **Grounding instruction input**
+    * instruction: $y = (c, e)$ with
+    * captions $c$ (language tokens)
+    * grounding $e = [(e_1, l_1),..]$:  
+        * semantic information: $e$ (what objects are being represented)
+            * Assuming text entity 
+        * spatial information: $l$ (where are the objects)
+            * Assume bounding box: $l=[\alpha_{min}, \beta_{min}, \alpha_{max}, \beta_{max}]$
+        * grounding tokens representation: a trick using Fourier embedding for attention learning 
+    * Scheduled sampling: helps in extending keypoints which was only seen in initial time steps and in later steps image quality improves further
+
+![gligen2](../assets/img/blogs/gligen2.gif)
+
+
+* How could we efficiently train the condition model?  **Continual Learning**
+    * The objective is to add new spatial grounding capabilities to existing large language-to-image generation models
+    * The key idea is to retain original model knowledge (due to high pre-training cost) by locking original weights and tune new modules for added capabilities 
+        * freeze the 2 original attention layers
+        * added a new gated self-attention layer
+    * Attention mechanism
+        $$v = v + \beta \tanh(\gamma)) * TS(SelfAttn([v, h^e]))$$
+        * TS(.) token selection mechanism applied only to visual tokens. 
+        * $\gamma$ learnable scalar initialized to 0, indicates importance of the condition
+        * $\beta$ set to 1 during training and varied during inference for better quality control for scheduled sampling
+        * Intuition: the gated self-attention allows visual features to leverage conditional information, and the resulting grounded features are treated as a residual, whose gate is initially set to 0. Note that a similar idea is used in Flamingo; however, it uses gated cross-attention.
+        * Comparison with Flamingo
+            * Better feature integration. 
+                * Self-attention blends visual and grounding tokens more naturally
+                * cross-attention keeps modalities dinstict, limiting fusion
+            *
+
+
+* What other approaches dealing with different types of grounding? 
+    * image prompt: $f_{image}(e)$
+    * keypoints: $l=[x, y]$
+    * spatially-aligned conditions: edge map, depth map, normal map, etc. 
+
+**Discussion**
+* Gated self-attention mechanism helps to "re-position" visual features in the latent space based on the grounding information. This re-positioning facilitated by the attention weights learned within the self-attention mechanism makes the subsequent cross-attention with the caption more effective.
+* Strengths
+    * Simple architecture that can be easily used for other models
+    * Works with wide variety of grounding inputs
+    * Gated attention blocks prevent grounding from decreasing preformance
+* Weaknesses
+    * Lack results on complicated compositions with multiple objects
+
+
+
+
+# Interesting Applications
+
+## WebGUM
+
+See [website](https://sites.google.com/view/mm-webnav/) and [paper](https://arxiv.org/abs/2305.11854).
+
+**Problem Definition**
+* Autonomous web navigation is a sequential decision making problem where the agent controls computers or crawls the Internet on the browser to satisfy given instructions.
+* Develop a model that takes in a command for a web-based task via a natural language instruction (e.g., in an email client, Find Gisele's email and forward it to Siana, please.) and uses multimodal observations to complete the task via a sequence of computer actions such as click and type.
+
+![webgen](../assets/img/blogs/webgen_example.png)
+
+**Related Works**
+* Online RL for web navigation:
+    * Represents web page as DOM tree. 
+    * Trains a mchine policy, providing a reward when the netowrk chooses a good action
+    * Limitations:
+        * Safety: Requires online interaction, which can be dangerous
+        * Data hungry; Needs large amount of data with trial and errors 
+        * Usually policy networks are tiny because you need to do lots of forward passes. So it is difficult to put a large VLM model in this framework
+        * Most existing models lack generalization 
+* VLM  
+    * InstructGPT + Zero shot
+        * Fine-tuned GPT-3 to better follow instructions
+        * Usese RL from human Feedback
+        * Competitive with online RL approaches
+    * SeeClick
+        * Purely vision based GUI agent, focuses on GUI grounding
+        * Actions are click and rotation
+        * Trained on 2.8K images
+
+**Approach**
+* Definition:
+    * Given a State Space $S$, action space $A$, transition function $T: S \cross A -> S$, an instruction space $G$ in the format of a prompt
+    * Define a reward function $r: S \cross G \cross A \in \{0,1\}$ 
+    * We learn a polic $\piy: S_t \cross A_t \cross G$, which tells how we are deciding the actions
+* Models   
+    * Vision encoder: pretrained ViT
+        * Not sure why used ImageNet pretrained not CLIP or other, that may have better multi-modal capabilities
+        * Generate tempoeral and local tokens with ViT
+            * 2 temporal tokens per patch via history of screenshots
+            * 1 local token per patch rather than CLS token
+    * Multimodal encoder-decoder: Flan-T5
+        * T5 is the best performing for HTML data 
+        * Using instruction tuned LLM because web navigation is inherently an instruction following task
+        * Why used encoder-decoder? Usually, encoder-decoder is used to pretrain on a generation task. Then, papers uses the pre-trained encoder and fine-tune it on classification. 
+* Training process
+    * Fine-tuned model on their web navigation data 
+* Generating data
+    * Only 12k episodes publicly available for MiniWoB++
+    * Generated 2.8k episodes using an existing LLM policy
+    * Used this to fine-tune Flan-T5-XL to generate 10k episodes per task
+    * Collects successes into 347k dataset
+
+
+![webgen](../assets/img/blogs/webgen.png)
+
+**Takeaways and Summary**
+* Discusssion
+    * Benefit of multimodality (HTML + screenshots) vs. just raw HTML.
+        * Ablations on HTML, HTML + Image (white) + Image (random) + Image (real) shows that even when you add a white image, the performance goes up. Why? Maybe because more parameters are added?
+    * Significant improvements when scaling up both dataset size and model size 
+    * Decision making over long-horizon is still an unsolved problem
+* Strengths
+    * Significant improvement on existing datasets and benchmarks (offline training)
+* Weaknesses
+    * Limited applications to real-world still
+    * Faily expensive given the relatively small scale 
+
+
+
+
+
+    
 
 
 

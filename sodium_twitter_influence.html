@@ -2,11 +2,61 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Awesome-pyecharts</title>
-                <script type="text/javascript" src="https://assets.pyecharts.org/assets/v5/echarts.min.js"></script>
-
+    <title>Interactions Among Top Influencers on Dietary Sodium Reduction on Twitter</title>
+    <script type="text/javascript" src="https://assets.pyecharts.org/assets/v5/echarts.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 80px; /* Added margin for content */
+        }
+        .description {
+            margin-top: 20px;
+            max-width: 1200px;
+            line-height: 1.5;
+        }
+        .authors, .modified-date, .citation, .background {
+            margin-top: 20px;
+            max-width: 1200px;
+            line-height: 1.5;
+        }
+    </style>
 </head>
 <body >
+
+    <!-- Title -->
+    <h1>Interactions Among Top Influencers on Dietary Sodium Reduction on Twitter</h1>
+    
+    <!-- Authors -->
+    <div class="authors">
+        <strong>Authors:</strong> Montoya, A., Mao, L., Drewnowski, A., Chen, J., Shi, E., Liang, A., Weiner, B. J., Su, Y.
+    </div>
+    
+    <!-- Last Modified Date -->
+    <div class="modified-date">
+        <strong>Last Modified:</strong> May 2024
+    </div>
+    
+    <!-- Background -->
+    <div class="background">
+        <p><strong>Background:</strong> Dietary sodium reduction is a public health priority, with social media playing a crucial role in disseminating related information and influencing public opinion. This study investigates the interactions among top influencers on Twitter who are engaged in discussions on sodium reduction policy, identifying key players, their connections, and the influence dynamics within the policy field. Understanding these interactions helps inform public health communication strategies and policy initiatives aimed at reducing sodium intake worldwide. We identified 78 users from three Policy Field categories with content related to dietary sodium, extracting 1,099,605 posts from Twitter (X) in total, of which 14,732 are dietary sodium related posts. See more details in our published paper:</p>
+        <p><strong>Citation:</strong> Montoya A*, Mao L*, Drewnowski A, Chen J, Shi E, Liang A, Weiner B, Su Y. Tracking Influencers in Policy Field on Social Media: A Global Longitudinal Study of Dietary Sodium Reduction Tweets, 2006-2022. <em>Journal of Medical Internet Research.</em> 2024 Oct 16. doi: 10.2196/54506.
+    </div>
+
+    <!-- Description -->
+    <div class="description">
+        <p><strong>How to interpret this interactive figure:</strong>
+        <p>
+            Each node represents an X user, with the color of the node indicating the policy group of the user and the size of the node representing the user’s overall influence score (i.e., the larger the node, the more dietary sodium influence the user had).
+        </p>
+        <p>
+            Hovering over each circle will reveal the total influence for that handle, as well as arrows and corresponding nodes indicating its interactions with other X handles. For example, hovering over the green WHO node reveals that WHO is an inner-setting organization with a total influence of 55,593, interacting with 11 other users. The thickness of each arrow represents the number of interactions between users (i.e., the thicker the line, the more interactions there were between users).
+        </p>
+        <p>
+            Hovering over an individual arrow will reveal the total number of interactions between the corresponding handles, with the color and tip of each arrow indicating the direction of the interactions. For instance, hovering over the green arrow between WHO and WASSH reveals that there have been 101 X edges from WHO to WASSH.
+        </p>
+    </div>
+
+    <!-- Chart Container -->
     <div id="b28995ece64240098b46bb4744e459a0" class="chart-container" style="width:1300px; height:1000px; "></div>
     <script>
         var chart_b28995ece64240098b46bb4744e459a0 = echarts.init(
@@ -3374,7 +3424,7 @@
     "title": [
         {
             "show": true,
-            "text": "Dietary Sodium Tweets",
+            "text": "",
             "target": "blank",
             "subtarget": "blank",
             "padding": 5,
@@ -3387,5 +3437,11 @@
 };
         chart_b28995ece64240098b46bb4744e459a0.setOption(option_b28995ece64240098b46bb4744e459a0);
     </script>
+
+    <!-- Background -->
+    <div class="background">
+        <p><strong>Contact:</strong> Lingchao Mao (lmao31@gatech.edu).
+    </div>
+    
 </body>
 </html>
