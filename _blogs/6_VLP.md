@@ -723,6 +723,66 @@ See [website](https://sites.google.com/view/mm-webnav/) and [paper](https://arxi
     * Faily expensive given the relatively small scale 
 
 
+# More than Two modalities
+
+## ImageBind 
+
+**Related Works**
+* AudioCLIP 
+    * Modalities: Audio, image, text
+    * Approach: Same approach as CLIP contrastive learning, but with three contrastive matrices (image, audio), (audio, text), (image, text)
+    * Data: each sample is 10s long from a youtube video
+* PointCLIP:
+    * Modalities: point cloud, image, text
+    * Approach: Project point cloud to four 2D depth maps. Then use textual encoder and image encoder. Uses an inter-view adapter 
+* Binding Touch
+    * Modalities: tactile, image, text
+* Two common approaches:
+    1. Separate encoder for each modality + paired data for all modalities
+    2. Only visual-text encoders + project other modality data to visual data
+
+**Approach**
+* Goal is to learn a single joint embedding space for all modalities by using images to bind them together (i.e. image as the linkage)
+    * Why image? 
+        * We have a lot of data in the image domain
+        * Other modalities like thermal are also paired with image, but not text 
+        * Image contain spatially correlated information, which is also contained in depth and thermal 
+    * Why not text?
+        * Intuitively, audio and text are closer 
+* Architecture
+    * Modality-specific encoders: $q_i = f(I_i)$, $k_i = g(M_i)$
+    * Image: ViT
+    * Depth and thermal iamge are treated as 1-D images 
+        * Converted depth in to disparity maps for scale invariance 
+    * Videos: address temporal relations by using 2 frame video clips sampled from 2 seconds, inflate the patch projection layer 
+    * Audio: convert 2s audio sampled at 16kHz into spectrograms using 128 mel-spectrogram bins, where x-axis represent time and y-axis represent frequency. Then, a Transformer can patchify the spectrogram (treated as image) can encode the audio signal. 
+        * Important design choices include overlap size of patches (each patch need enough information along time and frequency), patch size, and ImageNet pretraining 
+    * Inertial measurement unit (IMU)
+        * Measures linear acceleration and angular rate. 
+        * Data measured in X, Y, Z axes, 5s clips resulting in 2K time steps. 
+        * Projected using a 1D convolution with kernel size of 8
+    * Modality-specific linear projection to project all modalities into a 768-d embedding 
+* Loss design
+    * InfoNCE loss compare embeddings between image and another modality
+    * Symmetric: $L_{I, M}, L_{M, I}$
+* Dataset 
+    * (video, audio, text), 2M samples, 10s video clips from Youtube
+    * (audio, text) 200k 10s video clips annotated with 209 classes
+    * (Text, audio) from 1k and 1k text slips
+    * ...
+
+**Discussion**
+* Strengths
+    * mulimodal alignment
+    * emergent zero-shot capabilites
+    * upgrade existing models without additional trianing
+* Weaknesss
+    * limited benchmark
+    * Underperforms task-specific models 
+* Future work
+    * Enrich image alignment loss using other alignment data
+    
+![imagebind](../assets/img/blogs/imagebind.png)
 
 
 
