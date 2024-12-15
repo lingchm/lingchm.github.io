@@ -13,8 +13,30 @@ Outside research, I enjoy building AI/ML tools that streamline data access and a
 
 > *We have a small team of 2-3 developers. Please reach out if you are interested in collaborating or need assistance building ML solutions for your application.*
 
+<br><br>
 
-**MedAssist-Liver: an AI-powered Tool for Automated Liver Tumor Analysis**. 
+##### MMTrip, Your Personalized Multi-modal Routing Planner 
+
+This trip planning app provides door-to-door routes optimizing through all multimodal combinations of flights, public transit, driving, biking, and walking. Trips can be personalized via user-defined preferences/constraints. Accurate cost projections powered by real-time APIs and machine learning predictions. Here is a [demo](https://youtu.be/g0p3DScMEJs?feature=shared). Our [website](https://mmtrips.com) will be published once we receive funding support. 
+
+*🏆 Winner, IISE DAIS Mobile/Web App Competition 2024*
+
+<div style="text-align: center;">
+<img src="../assets/img/projects/mmtrip.png" alt="mmtrip" width="500"/>
+</div>
+
+<br><br>
+
+##### AskMendel, a LLM Assistant for Bioinformatics Data Analysis and Visualization
+
+This chatbot assistant performs automated analysis of single cell RNA-seq data generating analysis plan, python code, and figures given users’ biological question. This is a startup project led by Dr. Assaf Magen, former Assistant Professor at Precision Immunology Institute. See [website](https://askmendel.ai/).
+
+<div style="text-align: center;">
+<img src="../assets/img/projects/askmendel.png" alt="askmendel" width="500"/>
+</div>
+
+
+##### MedAssist-Liver: an AI-powered Tool for Automated Liver Tumor Analysis
 
 This web application supports automated liver tumor segmentation from CT scans using deep learning, and automated diagnosis report generation using large language models (LLM). See [website](https://lingchmao-medassist-liver-cancer.hf.space/) and [paper](https://arxiv.org/abs/2410.10005).
 
@@ -26,7 +48,7 @@ This web application supports automated liver tumor segmentation from CT scans u
 
 <br><br>
 
-**Sodium Reduction Policies in the U.S**
+##### Sodium Reduction Policies in the U.S
 
 This project compiled sodium reduction policies and laws in the U.S. from 1965 to 2022. This interactive dashboard allows users to analyze and visualize the distribution of policies by category, geographical region, and relationship with local sociodemographics. See [website](https://us-sodium-policies.shinyapps.io/Rshiny/).
 
@@ -35,25 +57,6 @@ This project compiled sodium reduction policies and laws in the U.S. from 1965 t
 </div>
 
 <br><br>
-
-**MMTrip, Your Personalized Multi-modal Routing Planner**. 
-This trip planning app provides door-to-door routes optimizing through all multimodal combinations of flights, public transit, driving, biking, and walking. Trips can be personalized via user-defined preferences/constraints. Accurate cost projections powered by real-time APIs and machine learning predictions. Here is a [demo](https://youtu.be/g0p3DScMEJs?feature=shared). Our [website](https://mmtrips.com) will be published once we receive funding support. 
-
-*🏆 Winner, IISE DAIS Mobile/Web App Competition 2024*
-
-<div style="text-align: center;">
-<img src="../assets/img/projects/mmtrip.png" alt="mmtrip" width="500"/>
-</div>
-
-<br><br>
-
-**AskMendel, a LLM Assistant for Bioinformatics Data Analysis and Visualization.**
-
-This chatbot assistant performs automated analysis of single cell RNA-seq data generating analysis plan, python code, and figures given users’ biological question. This is a startup project led by Dr. Assaf Magen, former Assistant Professor at Precision Immunology Institute. See [website](https://askmendel.ai/).
-
-<div style="text-align: center;">
-<img src="../assets/img/projects/askmendel.png" alt="askmendel" width="500"/>
-</div>
 
 <!-- pages/projects.md -->
 <!--

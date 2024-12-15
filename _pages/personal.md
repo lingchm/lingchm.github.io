@@ -4,12 +4,14 @@ permalink: /personal/
 title: personal
 description: 
 nav: true
-nav_order: 6
+nav_order: 7
 ---
 
 I play okay-level 🎾, enjoyable-level 🎹, and am a caring cat mom 🐈. 
 
 My tuxedo cat Mochi is happy to connect on instagram at [@mochimao_thecat](https://www.instagram.com/mochimao_thecat/)!
+
+I like casual family/friend travels, and recording the best scenaries with photography. Check out my collection at [unsplash@lingchm](https://unsplash.com/@lingchm).
 
 If you are someone who speaks Mandarin and want to learn native accent Spanish 🇪🇸, check out [letslearnspanish](https://letslearnspanish.podbean.com/)! We just launched the podcast and will ocassionally add more episodes. 
 

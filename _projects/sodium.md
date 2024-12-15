@@ -1,15 +1,15 @@
 ---
 layout: page
 title: Dietary sodium reduction for CVD prevention
-description: Social network analysis
-img: assets/img/publication_preview/jmir3.jpg
+description: Social network analysis for public health
+img: assets/img/publication_preview/jmir3.png
 importance: 3
 category: subgroup
 ---
 
 This project aims to assess health organization's influence on social media to derive dissemination strategy recommendations. We designed a four-dimensional framework to analyze topic-specific influence on Twitter. We applied this framework to 1M+ tweets from health organizations and analyzed their influence about dietary sodium intake, one of the risk factors of cardiovascular diseases. 
 
-*This project was led by Dr. Yanfang Su, from University of Washington, School of Public Health*
+*This project was led by [Dr. Yanfang Su](https://globalhealth.washington.edu/faculty/yanfang-su) from University of Washington, School of Public Health*
 
 <br><br>
 
@@ -27,8 +27,12 @@ This project compiled sodium reduction policies and laws in the U.S. from 1965 t
 
 This project compiled sodium reduction policies and laws in the U.S. from 1965 to 2022. This interactive dashboard allows users to analyze and visualize the distribution of policies by category, geographical region, and relationship with local sociodemographics. See [website](https://lingchm.github.io/sodium_twitter_influence.html).
 
-<div style="text-align: center;">
-<img src="../assets/img/projects/sodium-dashboard.png" alt="sodium-dashboard" width="500"/>
+<!-- <div style="text-align: center;">
+<img src="assets/img/projects/sodium-dashboard.png" alt="sodium-dashboard" width="500"/>
+</div> -->
+
+<div class="l-page">
+  <iframe src="{{ 'assets/plotly/sodium_twitter_influence.html' | relative_url }}" frameborder='0' scrolling='yes' height="1000px" width="100%" style="border: 1px dashed grey;"></iframe>
 </div>
 
 <br><br>

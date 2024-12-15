@@ -2,56 +2,48 @@
 ---
 @string{aps = {American Physical Society,}}
 
-@article{mao2024knowledge,
-  abbr={IEEE TASE},
-  bibtex_show={false},
-  title={Knowledge-Informed Machine Learning for Cancer Diagnosis and Prognosis: A review},
-  author={Mao, Lingchao and Wang, Hairong and Hu, Leland S and Tran, Nhan L and Canoll, Peter D and Swanson, Kristin R and Li, Jing},
-  journal={arXiv preprint arXiv:2401.06406},
-  year={2024},
-  preview={kiml.png},
-  abstract={Cancer remains one of the most challenging diseases to treat in the medical field. Machine learning has enabled in-depth analysis of rich multi-omics profiles and medical imaging for cancer diagnosis and prognosis. Despite these advancements, machine learning models face challenges stemming from limited labeled sample sizes, the intricate interplay of high-dimensionality data types, the inherent heterogeneity observed among patients and within tumors, and concerns about interpretability and consistency with existing biomedical knowledge. One approach to surmount these challenges is to integrate biomedical knowledge into data-driven models, which has proven potential to improve the accuracy, robustness, and interpretability of model results. Here, we review the state-of-the-art machine learning studies that adopted the fusion of biomedical knowledge and data, termed knowledge-informed machine learning, for cancer diagnosis and prognosis. Emphasizing the properties inherent in four primary data types including clinical, imaging, molecular, and treatment data, we highlight modeling considerations relevant to these contexts. We provide an overview of diverse forms of knowledge representation and current strategies of knowledge integration into machine learning pipelines with concrete examples. We conclude the review article by discussing future directions to advance cancer research through knowledge-informed machine learning.}
-}
-
-@article{mao2024mmfl,
-  abbr={INFORMS JDS},
-  bibtex_show={false},
-  title={Supervised Multi-Modal Fission Learning},
-  author={Mao, Lingchao and Wang, Qi and Su, Yi and Lure, Fleming and Li, Jing},
-  journal={arXiv preprint arXiv:2409.20559},
-  year={2024},
-  preview={mmfl.png},
-  abstract={Learning from multi-modal datasets can leverage complementary information and lead to improved performance for prediction tasks. To account for feature correlations in high-dimensional datasets, a commonly used strategy is the latent variable approach. Several latent variable methods in the literature have been proposed for multi-modal datasets, however, these methods either focus on extracting the shared component across all modalities or extracting a shared component and individual components specific to each modality. To address this gap, we propose a Multi-Modal Fission Learning (MMFL) model that simultaneously identifies globally joint, partially joint, and individual components underlying the features of multi-modal datasets. Unlike existing latent variable methods, MMFL uses supervision from labels to identify predictive latent components and has a natural extension to incorporate incomplete multi-modal data. In our simulation studies, MMFL outperformed a variety of existing multi-modal algorithms under both complete modality and incomplete modality settings. We applied MMFL to a real-world case study for early prediction of Alzheimer’s Disease using multi-modal neuroimaging (MRI and PET) and genetic data (SNP) from the Alzheimer’s Disease Neuroimaging Initiative (ADNI) dataset. MMFL provided more accurate predictions and better insights for understanding within and across modality correlations compared to existing methods.}
-}
 
 @article{mao2024vessel,
+  abbr={TMI},
   bibtex_show={false},
   title={BiVesNet: A Novel Hepatic/Portal Vein Segmentation Model for Diagnosis and Preoperative Liver Surgical Planning},
   author={Wu, Mian and Ren, Tuo and Mao, Lingchao and Huang, Yonghui and Li, Jing},
-  journal={under review},
-  year={2024},
+  journal={IEEE Transactions on Medical Imaging (under review)},
+  year={2025},
   preview={bivesnet.png},
   abstract={Accurate segmentation of Hepatic Vessels (HV) and Portal Vessels (PV) from CT images is crucial for the diagnosis and surgical planning of liver diseases. However, several challenges hinder automated segmentation solutions, including the complex vascular structure, the small scale and irregularity of vessels, low contrast and noisy background, and the closely interleaved HV/PV structures. In this paper, we introduce BiVesNet, the first learning-based model for automated and reliable HV/PV vessel segmentation. Our model consists of two stages: In Stage I, we perform single-class vessel segmentation using a hierarchical CNN-Transformer architecture that incorporates Gaussian-prior relative positional embeddings and a specialized attention mechanism to effectively capture local dependencies in vessel structures and differentiate the background with vessel. In Stage II, we introduce a novel topology-based algorithm for HV/PV vessel separation, which effectively handles residual vessels and discontinuities from the previous stage by leveraging Graph Attention Networks (GAT) to recover the topological relationships between the residuals and the main vessel trees. By pre-training and fine-tuning our models on three,publicly available CT datasets and one high-quality clinical dataset, BiVesNet consistently outperform state-of-the-art methods for liver vessel segmentation. Remarkably, our two-class HV/PV segmentation achieves performance on par with current semi-automatic clinical protocols. These results represent a significant step toward advancing fully automated HV/PV vessel segmentation tools, which can provide substantial clinical value for liver diagnostics and surgical planning.}
 }
 
+@article{mao2024mmfl,
+  abbr={IJDS},
+  bibtex_show={false},
+  title={Supervised Multi-Modal Fission Learning},
+  author={Mao, Lingchao and Wang, Qi and Su, Yi and Lure, Fleming and Li, Jing},
+  journal={arXiv preprint arXiv:2409.20559 (under review)},
+  year={2025},
+  preview={mmfl.png},
+  abstract={Learning from multi-modal datasets can leverage complementary information and lead to improved performance for prediction tasks. To account for feature correlations in high-dimensional datasets, a commonly used strategy is the latent variable approach. Several latent variable methods in the literature have been proposed for multi-modal datasets, however, these methods either focus on extracting the shared component across all modalities or extracting a shared component and individual components specific to each modality. To address this gap, we propose a Multi-Modal Fission Learning (MMFL) model that simultaneously identifies globally joint, partially joint, and individual components underlying the features of multi-modal datasets. Unlike existing latent variable methods, MMFL uses supervision from labels to identify predictive latent components and has a natural extension to incorporate incomplete multi-modal data. In our simulation studies, MMFL outperformed a variety of existing multi-modal algorithms under both complete modality and incomplete modality settings. We applied MMFL to a real-world case study for early prediction of Alzheimer’s Disease using multi-modal neuroimaging (MRI and PET) and genetic data (SNP) from the Alzheimer’s Disease Neuroimaging Initiative (ADNI) dataset. MMFL provided more accurate predictions and better insights for understanding within and across modality correlations compared to existing methods.}
+}
+
 @article{mao2024liver,
   bibtex_show={false},
-  title={A Holistic Weakly Supervised Approach for Liver Tumor Segmentation},
-  author={Wang, Hairong * and Mao, Lingchao * and Zhang, Zihan and Li, Jing},
-  journal={arXiv preprint arXiv:2410.10005},
-  year={2024},
+  abbr={IISE Trans. Health},
+  title={A Weakly Supervised Approach with Knowledge-Informed Label Smoothing for Liver Tumor Segmentation},
+  author={Wang, Hairong and Mao, Lingchao and Zhang, Zihan and Li, Jing},
+  journal={arXiv preprint arXiv:2410.10005 (under review)},
+  year={2025},
   preview={liver2024.png},
   abstract={Liver cancer is a leading cause of mortality worldwide, and accurate CT-based tumor segmentation is essential for diagnosis and treatment. Manual delineation is time-intensive, prone to variability, and highlights the need for reliable automation. While deep learning has shown promise for automated liver segmentation, precise liver tumor segmentation remains challenging due to the heterogeneous nature of tumors, imprecise tumor margins, and limited labeled data. We present a novel holistic weakly supervised framework that integrates clinical knowledge to address these challenges with (1) A knowledge-informed label smoothing technique that leverages clinical data to generate smooth labels, which regularizes model training reducing the risk of overfitting and enhancing model performance; (2) A global and local-view segmentation framework, breaking down the task into two simpler sub-tasks, allowing optimized preprocessing and training for each; and (3) Pre- and post-processing pipelines customized to the challenges of each subtask, which enhances tumor visibility and refines tumor boundaries. We evaluated the proposed method on the HCC-TACE-Seg dataset and showed that these three key components complementarily contribute to the improved performance. Lastly, we prototyped a tool for automated liver tumor segmentation and diagnosis summary generation called MedAssistLiver. The app and code are published at https://github.com/lingchm/medassistliver-cancer.}
 }
 
 @article{mao2024mkd,
-  abbr={IEEE TASE},
+  abbr={IEEE-TASE},
   bibtex_show={false},
   title={A Cross-Modal Mutual Knowledge Distillation Framework for Alzheimer's Disease Diagnosis: Addressing Incomplete Modalities},
   author={Kwak, Mingu and Mao, Lingchao and Zheng, Zhiyang and Su, Yi  and Fleming, Lure and Li, Jing},
-  journal={medRxiv},
-  year={2024},
-  doi={10.1101/2023.08.24.23294574}
+  journal={medRxiv (under review)},
+  year={2025},
+  doi={10.1101/2023.08.24.23294574},
   preview={mkd.png},
   abstract={Early detection of Alzheimer's Disease (AD) is crucial for timely interventions and optimizing treatment outcomes. Despite the promise of integrating multimodal neuroimages such as MRI and PET, handling datasets with incomplete modalities remains under-researched. This phenomenon, however, is common in real-world scenarios as not every patient has all modalities due to practical constraints such as cost, access, and safety concerns. We propose a deep learning framework employing cross-modal Mutual Knowledge Distillation (MKD) to model different sub-cohorts of patients based on their available modalities. In MKD, the multimodal model (e.g., MRI and PET) serves as a teacher, while the single-modality model (e.g., MRI only) is the student. Our MKD framework features three components: a Modality-Disentangling Teacher (MDT) model designed through information disentanglement, a student model that learns from classification errors and MDT's knowledge, and the teacher model enhanced via distilling the student's single-modal feature extraction capabilities. Moreover, we show the effectiveness of the proposed method through theoretical analysis and validate its performance with simulation studies. In addition, our method is demonstrated through a case study with Alzheimer's Disease Neuroimaging Initiative (ADNI) datasets, underscoring the potential of artificial intelligence in addressing incomplete multimodal neuroimaging datasets and advancing early AD detection.}
 }
@@ -61,29 +53,44 @@
   bibtex_show={false},
   title={Identifying and Predicting Headache Trajectories Amongst Those with Acute Post-Traumatic Headache},
   author={Mao, Lingchao and Li, Jing and Schwedt, Todd and Wu, Teresa and Ross, Katherine and Dumkrieger, Gina and Smith, Dani and Chong, Catherine D},
-  journal={Headache: The Journal of Head and Face Pain (under review)},
-  year={2024},
+  journal={Headache (under review)},
+  year={2025},
   preview={headache2024.png},
   abstract={Background: Post-traumatic headache (PTH) is a common symptom following mild traumatic brain injury (mTBI). Currently, there is no identified way to accurately predict if, when, and at what pace a person will have PTH improvement. In our prior studies, we focused on predicting headache improvement at three months post-mTBI. However, that approach may overlook individual differences in how headaches evolve over time. Objective: This study aims to identify individual subgroups based on their headache trajectories and to develop machine learning (ML) models for early prediction of headache evolution. Methods: Participants with acute PTH completed a daily electronic headache diary (eDIARY) over three months, recording their headache-related symptoms. Tensor decomposition was utilized to extract latent factors underlying the time-varying symptoms. We applied clustering techniques on the latent factors to identify patient subgroups with varying headache improvement trajectory. Next, we developed a ML method to classify each individual into a headache trajectory subgroup as early as possible within the three-month interval. Results: 73 individuals with acute PTH (mean age=44.8, SD=14.0; 50 females/23 males) were enrolled between 0-59 days post-mTBI. Data from 54 individuals were used as the developmental cohort for model training and 19 individuals were used as the test cohort for model evaluation. Tensor decomposition extracted two latent factors: one factor representing the ‘overall state’ of PTH severity and disability and the other representing the ‘improvement state’ of these symptoms over three months. Clustering identified four patient subgroups with distinct headache evolution trajectories: 1) severe symptoms without improvement, 2) severe symptoms with mild improvement, 3) milder symptoms with substantial improvement, 4) mildest symptoms with minimal improvement .The proposed ML model achieved 0.80 cross-validation accuracy in classifying individuals with PTH into subgroups for the training cohort and 0.84 accuracy for the test cohort. Notably, the model required only the first two weeks of headache data to accurately identify the subgroup with the mildest headaches, three additional weeks to identify the subgroup with the most severe headaches and no improvement in three months, and two additional weeks to distinguish the remaining subgroups. Conclusions: This study identified subgroups of individuals with acute PTH with distinct headache improvement trajectories. The proposed ML method accurately classified individuals into these subgroups using the minimally necessary early headache data for each person, including detecting the subgroup with the mildest headaches at two weeks. This approach could offer an estimated forecast of headache burden over time and could assist clinicians with determining treatment needs and eligibility for PTH clinical trials. }
 }
 
 @article{lewis2023revealing,
+  abbr = {medRxiv},
   bibtex_show={false},
   title={Revealing the biology behind MRI signatures in high grade glioma},
   author={Lewis, Erika M and Mao, Lingchao and Wang, Lujia and Swanson, Kristin R and Barajas, Ramon F and Li, Jing and Tran, Nhan L and Hu, Leland S and Plaisier, Christopher L},
-  journal={medRxiv},
+  journal={medRxiv (under review)},
   pages={2023--12},
-  year={2024},
+  year={2025},
   preview={revealing.png},
   publisher={Cold Spring Harbor Laboratory Press},
   abstract={Magnetic resonance imaging (MRI) measurements are routinely collected during the treatment of high-grade gliomas (HGGs) to characterize tumor boundaries and guide surgical tumor resection. Using spatially matched MRI and transcriptomics we discovered HGG tumor biology captured by MRI measurements. We strategically overlaid the spatially matched omics characterizations onto a pre-existing transcriptional map of glioblastoma multiforme (GBM) to enhance the robustness of our analyses. We discovered that T1+C measurements, designed to capture vasculature and blood brain barrier (BBB) breakdown and subsequent contrast extravasation, also indirectly reveal immune cell infiltration. The disruption of the vasculature and BBB within the tumor creates a permissive infiltrative environment that enables the transmigration of anti-inflammatory macrophages into tumors. These relationships were validated through histology and enrichment of genes associated with immune cell transmigration and proliferation. Additionally, T2-weighted (T2W) and mean diffusivity (MD) measurements were associated with angiogenesis and validated using histology and enrichment of genes involved in neovascularization. Furthermore, we establish an unbiased approach for identifying additional linkages between MRI measurements and tumor biology in future studies, particularly with the integration of novel MRI techniques. Lastly, we illustrated how noninvasive MRI can be used to map HGG biology spatially across a tumor, and this provides a platform to develop diagnostics, prognostics, or treatment efficacy biomarkers to improve patient outcomes.}
+}
+
+@article{mao2024knowledge,
+  abbr={IEEE-TASE},
+  bibtex_show={false},
+  title={Knowledge-Informed Machine Learning for Cancer Diagnosis and Prognosis: A review},
+  author={Mao, Lingchao and Wang, Hairong and Hu, Leland S and Tran, Nhan L and Canoll, Peter D and Swanson, Kristin R and Li, Jing},
+  journal={IEEE Transactions on Automation Science and Engineering},
+  volume={0},
+  year={2024},
+  doi={10.1109/TASE.2024.3515839},
+  preview={kiml.png},
+  selected={true},
+  abstract={Cancer remains one of the most challenging diseases to treat in the medical field. Machine learning has enabled in-depth analysis of rich multi-omics profiles and medical imaging for cancer diagnosis and prognosis. Despite these advancements, machine learning models face challenges stemming from limited labeled sample sizes, the intricate interplay of high-dimensionality data types, the inherent heterogeneity observed among patients and within tumors, and concerns about interpretability and consistency with existing biomedical knowledge. One approach to surmount these challenges is to integrate biomedical knowledge into data-driven models, which has proven potential to improve the accuracy, robustness, and interpretability of model results. Here, we review the state-of-the-art machine learning studies that adopted the fusion of biomedical knowledge and data, termed knowledge-informed machine learning, for cancer diagnosis and prognosis. Emphasizing the properties inherent in four primary data types including clinical, imaging, molecular, and treatment data, we highlight modeling considerations relevant to these contexts. We provide an overview of diverse forms of knowledge representation and current strategies of knowledge integration into machine learning pipelines with concrete examples. We conclude the review article by discussing future directions to advance cancer research through knowledge-informed machine learning.}
 }
 
 @article{mao2024sodium,
   abbr={JMIR},
   bibtex_show={false},
   title={Tracking Influencers in Policy Field on Social Media: A Global Longitudinal Study of Dietary Sodium Reduction Posts, 2006-2022},
-  author={Montoya, Alana * and Mao, Lingchao * and Drewnowski, Adam and Chen, Joshua and Shi, Ella and Liang, Aileen and Weiner, Bryan and Su, Yanfang},
+  author={Montoya, Alana and Mao, Lingchao and Drewnowski, Adam and Chen, Joshua and Shi, Ella and Liang, Aileen and Weiner, Bryan and Su, Yanfang},
   journal={Journal of Medical Internet Research},
   year={2024},
   doi={10.2196/54506},
@@ -92,7 +99,7 @@
 }
 
 @article{mao2023wstl,
-  abbr={IEEE TASE},
+  abbr={IEEE-TASE},
   bibtex_show={false},
   title={Weakly Supervised Transfer Learning with Application in Precision Medicine},
   author={Mao, Lingchao and Wang, Lujia and Hu, Leland and Eschbacher, Jennifer M and Leon, Gustavo D. and Singleton, Kyle W. and Curtin, Lee A. and Urcuyo, Javier and Sereduk, Chris and Tran, Nhan L. and Hawkins-Daarud, Andrea and Swanson, Kristin R. and Li, Jing}, 
@@ -100,6 +107,9 @@
   year={2023},
   doi={10.1109/TASE.2023.3323773},
   preview={wstl.png},
+  award_name={Award},
+  award={IISE DAIS Best Student Paper, 2022},
+  selected={true},
   abstract={Precision medicine aims to provide diagnosis and treatment accounting for individual differences. To develop machine learning models in support of precision medicine, personalized models are expected to have better performance than one-model-fits-all approaches. A significant challenge, however, is the limited number of labeled samples that can be collected from each individual due to practical constraints. Transfer Learning (TL) addresses this challenge by leveraging the information of other patients with the same disease (i.e., the source domain) when building a personalized model for each patient (i.e., the target domain). We propose Weakly-Supervised Transfer Learning (WS-TL) to tackle two challenges that existing TL algorithms do not address well: (i) the target domain has only a few or even no labeled samples; (ii) how to integrate domain knowledge into themTL design. We design a novel mathematical framework of WS-TL to learn a model for the target domain based on paired samples whose order relationships are inferred from domain knowledge, while at the same time integrating labeled samples in the source domain for transfer learning. Also, we propose an efficient active sampling strategy to select informative paired samples. Theoretical properties were investigated. Finally, we present a real-world application in precision medicine of brain cancer, where WS-TL is used to build personalized patient models to predict Tumor Cell Density (TCD) distribution across the brain based on MRI images. WS-TL has the highest accuracy compared to a variety of existing TL algorithms. The predicted TCD map for each patient can help facilitate individually optimized treatment.}
 }
 
@@ -120,22 +130,6 @@
   abstract={Our prior work demonstrated that questionnaires assessing psychosocial symptoms have utility for predicting improvement in patients with acute post-traumatic headache following mild traumatic brain injury. In this cohort study, we aimed to determine whether prediction accuracy can be refined by adding structural magnetic resonance imaging (MRI) brain measures to the model. Adults with acute post-traumatic headache (enrolled 0–59 days post-mild traumatic brain injury) underwent T1-weighted brain MRI and completed three questionnaires (Sports Concussion Assessment Tool, Pain Catastrophizing Scale, and the Trait Anxiety Inventory Scale). Individuals with post-traumatic headache completed an electronic headache diary allowing for determination of headache improvement at three- and at six-month follow-up. Questionnaire and MRI measures were used to train prediction models of headache improvement and headache trajectory. Forty-three patients with post-traumatic headache (mean age = 43.0, SD = 12.4; 27 females/16 males) and 61 healthy controls were enrolled (mean age = 39.1, SD = 12.8; 39 females/22 males). The best model achieved cross-validation Area Under the Curve of 0.801 and 0.805 for predicting headache improvement at three and at six months. The top contributing MRI features for the prediction included curvature and thickness of superior, middle, and inferior temporal, fusiform, inferior parietal, and lateral occipital regions. Patients with post-traumatic headache who did not improve by three months had less thickness and higher curvature measures and notably greater baseline differences in brain structure vs. healthy controls (thickness: p < 0.001, curvature: p = 0.012) than those who had headache improvement. A model including clinical questionnaire data and measures of brain structure accurately predicted headache improvement in patients with post-traumatic headache and achieved improvement compared to a model developed using questionnaire data alone.}
 }
 
-
-@article{ku2023high,
-  title={A high-dimensional incomplete-modality transfer learning method for early prediction of Alzheimer’s disease},
-  author={Ku, Dohyun and Zheng, Zhiyang and Mao, Lingchao and Chen, Rui Qi and Su, Yi and Chen, Kewei and Weidman, David and Wu, Teresa and Lure, Fleming and Lo, ShihChung and others},
-  journal={Alzheimer's \& Dementia},
-  volume={19},
-  pages={e078606},
-  url={https://alz.confex.com/alz/2023/meetingapp.cgi/Paper/78606},
-  year={2023},
-  preview={AD.png},
-  publisher={Wiley Online Library},
-  bibtex_show={false},
-  abstract={Prediction of Alzheimer’s disease (AD) risk for individuals with mild cognitive impairment (MCI) provides an opportunity for early intervention. Neuroimaging of different types/modalities has shown promise, but not every patient has all the modalities due to the cost and accessibility constraints. To integrate incomplete multi-modality datasets, we previously developed a machine learning (ML) model called incomplete-modality transfer learning (IMTL). We extended the capacity of IMTL to handle high-dimensional feature sets, namely, HD-IMTL, to further improve accuracy and robustness. Our dataset included 1319 T1-MRI scans from MCI patients in ADNI; among them, 1002 had FDG-PET and 612 had amyloid-PET. 156 regional volumetric and thickness features were computed from MRI and 83 and 83 regional SUVR features from FDG-PET and amyloid-PET, respectively. The dataset is randomly split into training and test sets. The goal of HD-IMTL was to jointly train 4 ML models to predict MCI conversion to AD in 36 months, with each model based on a certain combination of available modalities, namely, MRI, MRI+FDG, MRI+amyloid, and MRI+FDG+amyloid. These correspond to patient sub-cohorts that differ in their access to imaging modalities. To handle high-dimensional features, we employed feature screening to remove uninformative features, performed modality-wise partial least squares (PLS) to condense remaining features into PLS components, and used correlation tests to select components. To jointly train the 4 ML prediction models, IMTL was used, which is a generative model that uses expectation-maximization (EM) in joint parameter estimation to facilitate transfer learning. To account for sample imbalance in training, the Synthetic Minority Over-sampling Technique (SMOTE) was used. The trained models were applied to the test set. 20 training/test splits were repeated and AUCs on the test set were averaged. For comparison, three existing ML models for incomplete-modality fusion were applied to the same dataset. The AUCs by HD-IMTL were 0.802, 0.840, 0.868, and 0.880 for sub-cohorts with MRI, MRI+FDG, MRI+amyloid, and MRI+FDG+amyloid, respectively. The AUCs by existing methods were lower, with ranges of 0.749-0.793, 0.769-0.826, 0.816-0.863, and 0.832-0.868 }
-}
-
-
 @article{mao2023developing,
   bibtex_show={false},
   abbr={Headache},
@@ -151,11 +145,12 @@
   pdf={cephalalgia_2023.pdf},
   doi={10.1111/head.14450},
   url={https://pubmed.ncbi.nlm.nih.gov/36651586/},
-  abstract={Post‐traumatic headache (PTH) is a common symptom after mild traumatic brain injury (mTBI). Although there have been several studies that have used clinical features of PTH to attempt to predict headache recovery, currently no accurate methods exist for predicting individuals' improvement from acute PTH. This study investigated the utility of clinical questionnaires for predicting (i) headache improvement at 3 and 6 months, and (ii) headache trajectories over the first 3 months. We conducted a clinic-based observational longitudinal study of patients with acute PTH who completed a battery of clinical questionnaires within 0–59 days post-mTBI. The battery included headache history, symptom evaluation, cognitive tests, psychological tests, and scales assessing photosensitivity, hyperacusis, insomnia, cutaneous allodynia, and substance use. Each participant completed a web-based headache diary, which was used to determine headache improvement. Thirty-seven participants with acute PTH (mean age = 42.7, standard deviation [SD] = 12.0; 25 females/12 males) completed questionnaires at an average of 21.7 (SD = 13.1) days post-mTBI. The classification of headache improvement or non-improvement at 3 and 6 months achieved cross-validation area under the curve (AUC) of 0.72 and 0.84. Sub-models trained using only the top five features still achieved 0.72 and 0.77 AUC. The top five contributing features were from three questionnaires: Pain Catastrophizing Scale total score and helplessness sub-domain score; Sports Concussion Assessment Tool Symptom Evaluation total score and number of symptoms; and the State-Trait Anxiety Inventory score. The functional regression model achieved for modeling headache trajectory over the first 3 months. Questionnaires completed following mTBI have good utility for predicting headache improvement at 3 and 6 months in the future as well as the evolving headache trajectory. Reducing the battery to only three questionnaires, which assess post-concussive symptom load and biopsychosocialecologic factors, was helpful to determine a reasonable prediction accuracy for headache improvement.}
+  abstract={Post-traumatic headache (PTH) is a common symptom after mild traumatic brain injury (mTBI). Although there have been several studies that have used clinical features of PTH to attempt to predict headache recovery, currently no accurate methods exist for predicting individuals' improvement from acute PTH. This study investigated the utility of clinical questionnaires for predicting (i) headache improvement at 3 and 6 months, and (ii) headache trajectories over the first 3 months. We conducted a clinic-based observational longitudinal study of patients with acute PTH who completed a battery of clinical questionnaires within 0–59 days post-mTBI. The battery included headache history, symptom evaluation, cognitive tests, psychological tests, and scales assessing photosensitivity, hyperacusis, insomnia, cutaneous allodynia, and substance use. Each participant completed a web-based headache diary, which was used to determine headache improvement. Thirty-seven participants with acute PTH (mean age = 42.7, standard deviation [SD] = 12.0; 25 females/12 males) completed questionnaires at an average of 21.7 (SD = 13.1) days post-mTBI. The classification of headache improvement or non-improvement at 3 and 6 months achieved cross-validation area under the curve (AUC) of 0.72 and 0.84. Sub-models trained using only the top five features still achieved 0.72 and 0.77 AUC. The top five contributing features were from three questionnaires: Pain Catastrophizing Scale total score and helplessness sub-domain score; Sports Concussion Assessment Tool Symptom Evaluation total score and number of symptoms; and the State-Trait Anxiety Inventory score. The functional regression model achieved for modeling headache trajectory over the first 3 months. Questionnaires completed following mTBI have good utility for predicting headache improvement at 3 and 6 months in the future as well as the evolving headache trajectory. Reducing the battery to only three questionnaires, which assess post-concussive symptom load and biopsychosocialecologic factors, was helpful to determine a reasonable prediction accuracy for headache improvement.}
 }
 
 @article{mao20234d,
   bibtex_show={false},
+  abbr = {JMIR},
   title={A 4D Theoretical Framework for Measuring Topic-Specific Influence on Twitter: Development and Usability Study on Dietary Sodium Tweets},
   author={Mao, Lingchao and Chu, Emily and Gu, Jinghong and Hu, Tao and Weiner, Bryan J and Su, Yanfang},
   journal={Journal of Medical Internet Research},
@@ -169,18 +164,31 @@
   publisher={JMIR Publications Toronto, Canada}
 }
 
-@inproceedings{mao2022personalized,
-  bibtex_show={false},
-  title={Personalized Predictions for Unplanned Urinary Tract Infection Hospitalizations with Hierarchical Clustering},
-  abbr={INFORMS ICCS},
-  author={Mao, Lingchao and Vahdat, Kimia and Shashaani, Sara and Swann, Julie L},
-  booktitle={AI and Analytics for Public Health: Proceedings of the 2020 INFORMS International Conference on Service Science},
-  pages={453--465},
-  year={2022},
-  organization={Springer},
-  preview={uti.png},
-  url={https://link.springer.com/chapter/10.1007/978-3-030-75166-1_34},
-  abstract={Urinary Tract Infection (UTI) is the one of the most frequent and preventable healthcare-associated infections in the US and an important cause of morbidity and excess healthcare costs. This study aims to predict the 30-day risk of a beneficiary for unplanned hospitalization for UTI. Using 2008–12 Medicare fee-for-service claims and several public sources, we extracted 784 features, including patient demographics, clinical conditions, healthcare utilization, provider quality metrics, and community safety indicators. To address the challenge of high heterogeneity and imbalance in data, we propose a hierarchical clustering approach that leverages existing knowledge and data-driven algorithms to partition the population into groups of similar risk, followed by building a LASSO-Logistic Regression (LLR) model for each group. Our prediction models are trained on 237,675 2011 Medicare beneficiaries and tested on 230,042 2012 Medicare beneficiaries. We compare the clustering-based approach to a baseline LLR model using five performance metrics, including the area under the curve (AUC), the True Positive Rate (TPR), and the False Positive Rate (FPR). Results show that the hierarchical clustering approach achieves more accurate and precise predictions (AUC 0.72) than the benchmark model and offers more granular feature importance insights for each patient group.}
+@article{ku2023high,
+  title={A high-dimensional incomplete-modality transfer learning method for early prediction of Alzheimer’s disease},
+  abbr={Conference Proc},
+  author={Ku, Dohyun and Zheng, Zhiyang and Mao, Lingchao and Chen, Rui Qi and Su, Yi and Chen, Kewei and Weidman, David and Wu, Teresa and Lure, Fleming and Lo, ShihChung and others},
+  journal={Alzheimers and Dementia},
+  volume={19},
+  pages={e078606},
+  url={https://alz.confex.com/alz/2023/meetingapp.cgi/Paper/78606},
+  year={2023},
+  preview={AD.png},
+  publisher={Wiley Online Library},
+  abstract={Prediction of Alzheimer's disease (AD) risk for individuals with mild cognitive impairment (MCI) provides an opportunity for early intervention. Neuroimaging of different types/modalities has shown promise, but not every patient has all the modalities due to the cost and accessibility constraints. To integrate incomplete multi-modality datasets, we previously developed a machine learning (ML) model called incomplete-modality transfer learning (IMTL). We extended the capacity of IMTL to handle high-dimensional feature sets, namely, HD-IMTL, to further improve accuracy and robustness. Our dataset included 1319 T1-MRI scans from MCI patients in ADNI; among them, 1002 had FDG-PET and 612 had amyloid-PET. 156 regional volumetric and thickness features were computed from MRI and 83 and 83 regional SUVR features from FDG-PET and amyloid-PET, respectively. The dataset is randomly split into training and test sets. The goal of HD-IMTL was to jointly train 4 ML models to predict MCI conversion to AD in 36 months, with each model based on a certain combination of available modalities, namely, MRI, MRI+FDG, MRI+amyloid, and MRI+FDG+amyloid. These correspond to patient sub-cohorts that differ in their access to imaging modalities. To handle high-dimensional features, we employed feature screening to remove uninformative features, performed modality-wise partial least squares (PLS) to condense remaining features into PLS components, and used correlation tests to select components. To jointly train the 4 ML prediction models, IMTL was used, which is a generative model that uses expectation-maximization (EM) in joint parameter estimation to facilitate transfer learning. To account for sample imbalance in training, the Synthetic Minority Over-sampling Technique (SMOTE) was used. The trained models were applied to the test set. 20 training/test splits were repeated and AUCs on the test set were averaged. For comparison, three existing ML models for incomplete-modality fusion were applied to the same dataset. The AUCs by HD-IMTL were 0.802, 0.840, 0.868, and 0.880 for sub-cohorts with MRI, MRI+FDG, MRI+amyloid, and MRI+FDG+amyloid, respectively. The AUCs by existing methods were lower, with ranges of 0.749-0.793, 0.769-0.826, 0.816-0.863, and 0.832-0.868 }
 }
 
-
+@article{mao2022personalized,
+  title = {Personalized Predictions for Unplanned Urinary Tract Infection Hospitalizations with Hierarchical Clustering},
+  abbr = {Conference Proc},
+  author = {Mao, Lingchao and Vahdat, Kimia and Shashaani, Sara and Swann, Julie L},
+  booktitle = {AI and Analytics for Public Health: Proceedings of the 2020 INFORMS International Conference on Service Science},
+  pages = {453--465},
+  year = {2022},
+  organization = {Springer},
+  preview = {uti.png},
+  award_name = {Award},
+  award = {INFORMS ICSS Best Student Paper Finalist, 2020},
+  url = {https://link.springer.com/chapter/10.1007/978-3-030-75166-1_34},
+  abstract = {Urinary Tract Infection (UTI) is one of the most frequent and preventable healthcare-associated infections in the US and an important cause of morbidity and excess healthcare costs. This study aims to predict the 30-day risk of a beneficiary for unplanned hospitalization for UTI. Using 2008–12 Medicare fee-for-service claims and several public sources, we extracted 784 features, including patient demographics, clinical conditions, healthcare utilization, provider quality metrics, and community safety indicators. To address the challenge of high heterogeneity and imbalance in data, we propose a hierarchical clustering approach that leverages existing knowledge and data-driven algorithms to partition the population into groups of similar risk, followed by building a LASSO-Logistic Regression (LLR) model for each group. Our prediction models are trained on 237,675 2011 Medicare beneficiaries and tested on 230,042 2012 Medicare beneficiaries. We compare the clustering-based approach to a baseline LLR model using five performance metrics, including the area under the curve (AUC), the True Positive Rate (TPR), and the False Positive Rate (FPR). Results show that the hierarchical clustering approach achieves more accurate and precise predictions (AUC 0.72) than the benchmark model and offers more granular feature importance insights for each patient group.}
+}

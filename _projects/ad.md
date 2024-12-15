@@ -1,16 +1,15 @@
 ---
 layout: page
 title: Early prediction of Alzheimer’s Disease
-description: Early diagnosis using multi-modal neuroimaging (MRI, PET, AV45)
-img:
+description: Multimodal learning using neuroimaging and genomics data
+img: assets/img/publication_preview/mri.png
 importance: 3
 category: multimodal
-related_publications: 
 ---
 
 Alzheimer’S disease (AD), a fatal neurodegenerative disorder, has become a pervasive global health challenge, with over 6.7 million Americans aged 65 and older affected in 2023. There is yet no cure for Alzheimers, but there are treatments that can help manage the symptoms. Yet, the potential of these drugs to slow down disease progression is contingent upon early administration, ideally during the mild cognitive impairment (MCI) phase preceding AD dementia. Therefore, accurate differentiation of MCI patients who will convert to AD is crucial to ensure appropriate treatment at the optimal time.
 
-This research aims to do early prediction of AD conversion.
+This research aims to do early prediction of AD conversion using neuroimaging and genomics data.
 
 The modelling challenges of this application include but are not limited to:
 * Learning from multimodal data spanning imaging, genomics, demographics
