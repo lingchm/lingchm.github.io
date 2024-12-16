@@ -146,7 +146,7 @@ Analyzing these datasets presents interesting challenges, primarily due to the l
 <br>
 <br>
 
-#### 3. Data Mining and Subgroup Identification
+#### 3. Data Mining and Predictive Modelling
 
 Data mining is a powerful technique for knowledge-discovery and information analysis from large, complex datasets. For example, we analyzed millions of tweets from social media to identify influencers in a social network. In healthcare, we mined large-scale medical claims to discover patients in similar risk groups for hospital readmission. 
 

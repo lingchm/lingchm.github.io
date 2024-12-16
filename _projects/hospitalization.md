@@ -11,7 +11,7 @@ This project developed machine learning models to predict patient health outcome
 
 We developing a data-driven and knowledge-informed algorithm that divides the population into similar risk groups based on patient demographics, medical history, care quality, and environmental factors we can build more personalized, effective prediction models for each group. We also included a mixed-integer programming-based scoring algorithm to generate monthly hospitalization risk for individual patients. 
 
-![alt text](assets/img/projects/uti.png)
+![alt text](/assets/img/projects/uti.png)
 
 *This project was led by [Dr. Sara Shashaani](https://shashaani.wordpress.ncsu.edu/) and [Dr. Julie Swann](https://www.ise.ncsu.edu/people/jlswann/) fron North Carolina State University. The team was selected top 25 out of 300+ teams into Stage I of the 2020 national \$1M CMS AI Health Outcomes Challenge.*
 

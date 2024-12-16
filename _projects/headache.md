@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Discovery of Biomarkers for Post-traumetic Headache
+title: Discovery of Biomarkers for Persistence of Post-traumetic Headache
 description: Multimodal learning using neuroimaging, questionnaires, and mobile-collected speech data.
-img: assets/img/projects/concussion.png
+img: assets/img/projects/pth_mri.png
 importance: 3
 category: multimodal
 ---

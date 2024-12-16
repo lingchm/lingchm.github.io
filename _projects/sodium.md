@@ -1,8 +1,9 @@
 ---
 layout: page
-title: Dietary sodium reduction for CVD prevention
-description: Social network analysis for public health
+title: Identifying Influencers on Social Media
+description: Social network analysis of public health influencers
 img: assets/img/publication_preview/jmir3.png
+redirect: https://lingchm.github.io/sodium_twitter_influence.html
 importance: 3
 category: subgroup
 ---
